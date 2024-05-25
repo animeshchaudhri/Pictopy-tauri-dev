@@ -6,10 +6,6 @@ from app.yolov8.utils import class_names
 
 router = APIRouter()
 
-@router.get("/")
-def test_route():
-    return {"message": "Hello World!"}
-    
 
 @router.post("/return")
 def test_route(payload: dict):

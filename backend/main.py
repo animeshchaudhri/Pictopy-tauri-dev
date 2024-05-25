@@ -18,5 +18,9 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+@app.get("/")
+def test_route():
+    return {"message": "Hello World!"}
+    
 
 app.include_router(test_router, prefix="/test", tags=["Test"])
