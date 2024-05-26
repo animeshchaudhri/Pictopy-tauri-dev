@@ -71,6 +71,8 @@ const FileBrowser = (): JSX.Element => {
         const imageFiles = contents.filter((file: any) => {
           return /\.(jpg|jpeg|png|gif)$/i.test(file.name);
         });
+
+        console.log(imageFiles);
         const imageUrls = await Promise.all(
           imageFiles.map(async (file) => {
             return await convertFileSrc(file.path);

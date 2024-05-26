@@ -1261,6 +1261,7 @@ dependencies = [
 name = "image-gallery"
 version = "0.0.0"
 dependencies = [
+ "anyhow",
  "serde",
  "serde_json",
  "tauri",
