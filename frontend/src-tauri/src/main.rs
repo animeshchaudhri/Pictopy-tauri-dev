@@ -8,7 +8,7 @@ use std::fs;
 use std::path::Path;
 use tauri::command;
 
-#[command]
+#[tauri::command]
 fn get_images_in_folder(folder_path: String) -> Result<Vec<String>, String> {
     let mut images = Vec::new();
     find_images_in_directory(&folder_path, &mut images)?;
@@ -28,7 +28,7 @@ fn find_images_in_directory(directory: &str, images: &mut Vec<String>) -> Result
     Ok(())
 }
 
-#[command]
+#[tauri::command]
 fn get_folders_with_images(root_directory: String) -> Result<Vec<String>, String> {
     let mut folders_with_images = Vec::new();
     scan_directory(&root_directory, &mut folders_with_images)?;
@@ -40,9 +40,13 @@ fn scan_directory(directory: &str, folders_with_images: &mut Vec<String>) -> Res
         let entry = entry.map_err(|e| format!("Error accessing directory entry: {}", e))?;
         let path = entry.path();
         if path.is_dir() {
-            if contains_images(&path)
-                .map_err(|e| format!("Error checking images in directory: {}", e))?
-            {
+            if contains_images(&path).map_err(|e| {
+                format!(
+                    "Error checking images in directory {}: {}",
+                    path.display(),
+                    e
+                )
+            })? {
                 folders_with_images.push(path.to_string_lossy().into_owned());
             } else {
                 scan_directory(&path.to_string_lossy(), folders_with_images)
@@ -76,6 +80,8 @@ fn is_image_file(path: &Path) -> bool {
 
 fn main() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_shell::init())
+        .plugin(tauri_plugin_fs::init())
         .invoke_handler(tauri::generate_handler![
             get_folders_with_images,
             get_images_in_folder,

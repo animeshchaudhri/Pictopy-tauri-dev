@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { homeDir, resolve } from "@tauri-apps/api/path";
-import { readDir } from "@tauri-apps/api/fs";
-import { convertFileSrc } from "@tauri-apps/api/tauri";
+import { readDir } from "@tauri-apps/plugin-fs";
+import { convertFileSrc } from "core";
 
 interface File {
   name: string;

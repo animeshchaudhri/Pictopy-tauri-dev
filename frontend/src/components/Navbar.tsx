@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { convertFileSrc, invoke } from "@tauri-apps/api/tauri";
+
 import BigImageView from "./bigview";
+import { convertFileSrc, invoke } from "@tauri-apps/api/core";
 
 const Test2: React.FC = () => {
   const [folders, setFolders] = useState<string[]>([]);
@@ -14,7 +15,7 @@ const Test2: React.FC = () => {
     async function fetchFolders() {
       try {
         const result: string[] = await invoke("get_folders_with_images", {
-          rootDirectory: "C:/Users/Asus/Desktop",
+          rootDirectory: "E:/photos",
         });
         setFolders(result);
       } catch (error) {
@@ -40,7 +41,7 @@ const Test2: React.FC = () => {
       setImages(imageUrls);
       setSelectedFolder(folder);
       setCurrentPage(1);
-      setBigImageIndex(null); 
+      setBigImageIndex(null);
     } catch (error) {
       console.error("Error loading images:", error);
     }
@@ -71,7 +72,7 @@ const Test2: React.FC = () => {
                 className="cursor-pointer text-blue-600 hover:text-blue-800"
                 onClick={() => handleFolderClick(folder)}
               >
-              📁  {folder}
+                📁 {folder}
               </li>
             ))}
           </ul>
