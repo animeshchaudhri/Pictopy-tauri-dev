@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const BigImageView: React.FC<{ images: string[]; onClose: () => void }> = ({
+const BigImageView: React.FC<{ images: string[]; initialIndex: number; onClose: () => void }> = ({
   images,
+  initialIndex,
   onClose,
 }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(initialIndex);
+
+  useEffect(() => {
+    setCurrentImageIndex(initialIndex); 
+  }, [initialIndex]);
 
   function handlePrevImage() {
     setCurrentImageIndex((prevIndex) =>

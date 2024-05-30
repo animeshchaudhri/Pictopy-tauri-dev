@@ -8,26 +8,35 @@ const Test2: React.FC = () => {
   const [selectedFolder, setSelectedFolder] = useState<string | null>(null);
   const [images, setImages] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [directoryInput, setDirectoryInput] = useState<string>("");
   const imagesPerPage = 6;
   const [bigImageIndex, setBigImageIndex] = useState<number | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [Directory, setDirectory] = useState<string>("");
 
   useEffect(() => {
     async function fetchFolders() {
       try {
+        console.log(Directory);
+        if (!Directory) return;
+        setLoading(true); 
         const result: string[] = await invoke("get_folders_with_images", {
-          rootDirectory: "E:/photos",
+          directory: Directory,
         });
         setFolders(result);
       } catch (error) {
         console.error("Error fetching folders:", error);
+      } finally {
+        setLoading(false); 
       }
     }
 
     fetchFolders();
-  }, []);
+  }, [Directory]);
 
   async function handleFolderClick(folder: string) {
     try {
+      setLoading(true); 
       const result: string[] = await invoke("get_images_in_folder", {
         folderPath: folder,
       });
@@ -44,6 +53,8 @@ const Test2: React.FC = () => {
       setBigImageIndex(null);
     } catch (error) {
       console.error("Error loading images:", error);
+    } finally {
+      setLoading(false); 
     }
   }
 
@@ -62,7 +73,25 @@ const Test2: React.FC = () => {
   return (
     <div className="p-4">
       <h1 className="text-3xl font-bold mb-4">Pictopy</h1>
-      {!selectedFolder ? (
+      <div className="flex gap-3">
+        <input
+          type="text"
+          value={directoryInput}
+          placeholder="Enter directory location"
+          className="border border-gray-400 rounded px-2 py-1 mb-4"
+          onChange={(e) => setDirectoryInput(e.target.value)}
+        />
+        <button
+          className="mb-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+          onClick={() => setDirectory(directoryInput)}
+        >
+          Fetch Data
+        </button>
+      </div>
+      {loading ? (
+        <div className="loading-container">
+          <div className="loader"></div></div> 
+      ) : !selectedFolder ? (
         <div>
           <h2 className="text-2xl font-semibold mb-2">Folders with Images</h2>
           <ul className="list-disc pl-5">
@@ -127,7 +156,11 @@ const Test2: React.FC = () => {
         </div>
       )}
       {bigImageIndex !== null && (
-        <BigImageView images={images} onClose={() => setBigImageIndex(null)} />
+        <BigImageView
+          images={images}
+          initialIndex={bigImageIndex}
+          onClose={() => setBigImageIndex(null)}
+        />
       )}
     </div>
   );

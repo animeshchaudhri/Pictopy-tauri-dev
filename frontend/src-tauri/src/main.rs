@@ -2,80 +2,69 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
+use walkdir::WalkDir;
+use std::path::PathBuf;
 
-use anyhow::Result;
-use std::fs;
-use std::path::Path;
-use tauri::command;
 
-#[tauri::command]
-fn get_images_in_folder(folder_path: String) -> Result<Vec<String>, String> {
-    let mut images = Vec::new();
-    find_images_in_directory(&folder_path, &mut images)?;
-    Ok(images)
-}
-
-fn find_images_in_directory(directory: &str, images: &mut Vec<String>) -> Result<(), String> {
-    for entry in fs::read_dir(directory).map_err(|e| format!("Error reading directory: {}", e))? {
-        let entry = entry.map_err(|e| format!("Error accessing directory entry: {}", e))?;
-        let path = entry.path();
-        if path.is_dir() {
-            find_images_in_directory(&path.to_string_lossy(), images)?;
-        } else if is_image_file(&path) {
-            images.push(path.to_string_lossy().into_owned());
-        }
-    }
-    Ok(())
-}
 
 #[tauri::command]
-fn get_folders_with_images(root_directory: String) -> Result<Vec<String>, String> {
-    let mut folders_with_images = Vec::new();
-    scan_directory(&root_directory, &mut folders_with_images)?;
-    Ok(folders_with_images)
-}
+fn get_images_in_folder(folder_path: &str) -> Vec<PathBuf> {
+    let mut image_paths = Vec::new();
 
-fn scan_directory(directory: &str, folders_with_images: &mut Vec<String>) -> Result<(), String> {
-    for entry in fs::read_dir(directory).map_err(|e| format!("Error reading directory: {}", e))? {
-        let entry = entry.map_err(|e| format!("Error accessing directory entry: {}", e))?;
-        let path = entry.path();
-        if path.is_dir() {
-            if contains_images(&path).map_err(|e| {
-                format!(
-                    "Error checking images in directory {}: {}",
-                    path.display(),
-                    e
-                )
-            })? {
-                folders_with_images.push(path.to_string_lossy().into_owned());
-            } else {
-                scan_directory(&path.to_string_lossy(), folders_with_images)
-                    .map_err(|e| format!("Error scanning directory: {}", e))?;
+   
+    for entry in WalkDir::new(folder_path).into_iter().filter_map(|e| e.ok()) {
+        
+        if entry.file_type().is_file() {
+            
+            if let Some(extension) = entry.path().extension() {
+                if let Some(extension_str) = extension.to_str() {
+                    if is_image_extension(extension_str) {
+                        image_paths.push(entry.path().to_owned());
+                    }
+                }
             }
         }
     }
-    Ok(())
+
+    image_paths
 }
 
-fn contains_images(directory: &Path) -> Result<bool, std::io::Error> {
-    for entry in fs::read_dir(directory)? {
-        let entry = entry?;
-        let path = entry.path();
-        if path.is_file() && is_image_file(&path) {
-            return Ok(true);
+
+
+
+#[tauri::command]
+fn get_folders_with_images(directory:&str) -> Vec<PathBuf> {
+    let mut folder_paths = Vec::new();
+    // let directory = "C:/Users/Asus";
+   println!("Directory: {}", directory);
+ 
+    for entry in WalkDir::new(directory).into_iter().filter_map(|e| e.ok()) {
+       
+        if entry.file_type().is_file() {
+          
+            if let Some(extension) = entry.path().extension() {
+                if let Some(extension_str) = extension.to_str() {
+                    if is_image_extension(extension_str) {
+                       
+                        let folder_path = entry.path().parent().unwrap().to_owned();
+                        if !folder_paths.contains(&folder_path) {
+                            folder_paths.push(folder_path);
+                        }
+                    }
+                }
+            }
         }
     }
-    Ok(false)
+
+    folder_paths
 }
 
-fn is_image_file(path: &Path) -> bool {
-    if let Some(extension) = path.extension() {
-        return matches!(
-            extension.to_str().unwrap().to_lowercase().as_str(),
-            "jpg" | "jpeg" | "png" | "gif" | "bmp" | "tiff"
-        );
+
+fn is_image_extension(extension: &str) -> bool {
+    match extension.to_lowercase().as_str() {
+        "jpg" | "jpeg" | "png" | "gif" | "bmp" | "tiff" | "webp" => true,
+        _ => false,
     }
-    false
 }
 
 fn main() {
