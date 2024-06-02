@@ -53,7 +53,7 @@ def get_images():
         files = os.listdir(IMAGES_PATH)
         # for now include bmp and gif, could remove later
         image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif'] 
-        image_files = [file for file in files if os.path.splitext(file)[1].lower() in image_extensions]
+        image_files = [os.path.abspath(os.path.join(IMAGES_PATH, file)) for file in files if os.path.splitext(file)[1].lower() in image_extensions]
         
         return {"images": image_files}
     
