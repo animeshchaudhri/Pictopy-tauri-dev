@@ -19,7 +19,7 @@ const Test2: React.FC = () => {
       try {
         console.log(Directory);
         if (!Directory) return;
-        setLoading(true); 
+        setLoading(true);
         const result: string[] = await invoke("get_folders_with_images", {
           directory: Directory,
         });
@@ -27,7 +27,7 @@ const Test2: React.FC = () => {
       } catch (error) {
         console.error("Error fetching folders:", error);
       } finally {
-        setLoading(false); 
+        setLoading(false);
       }
     }
 
@@ -36,7 +36,7 @@ const Test2: React.FC = () => {
 
   async function handleFolderClick(folder: string) {
     try {
-      setLoading(true); 
+      setLoading(true);
       const result: string[] = await invoke("get_images_in_folder", {
         folderPath: folder,
       });
@@ -54,7 +54,7 @@ const Test2: React.FC = () => {
     } catch (error) {
       console.error("Error loading images:", error);
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   }
 
@@ -71,8 +71,7 @@ const Test2: React.FC = () => {
   }
 
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Pictopy</h1>
+    <div className="p-4 flex-1 flex flex-col">
       <div className="flex gap-3">
         <input
           type="text"
@@ -90,10 +89,13 @@ const Test2: React.FC = () => {
       </div>
       {loading ? (
         <div className="loading-container">
-          <div className="loader"></div></div> 
+          <div className="loader"></div>
+        </div>
       ) : !selectedFolder ? (
         <div>
-          <h2 className="text-2xl font-semibold mb-2">Folders with Images</h2>
+          <h2 className="text-2xl text-white font-semibold mb-2">
+            Folders with Images
+          </h2>
           <ul className="list-disc pl-5">
             {folders.map((folder, index) => (
               <li
