@@ -4,8 +4,8 @@ import Main_menu from "../main_menu/main_menu";
 function Sidebar() {
   return (
     <>
-      <div className="flex-1 flex ">
-        <div className=" flex flex-col justify-between bg-[#333333] w-40 border-r border-gray-700 dark:border-gray-700 p-4 space-y-4">
+     
+        <div className=" flex sidebar flex-col justify-between bg-[#333333] w-40 border-r border-gray-700 dark:border-gray-700 p-4 space-y-4">
           <div className="flex flex-col mt-2 gap-10">
             <div className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50">
               <HomeIcon className="h-5 w-5" />
@@ -33,9 +33,9 @@ function Sidebar() {
             <span className="font-sans">Settings</span>
           </div>
         </div>
-        <Main_menu />
+        {/* <Main_menu /> */}
         {/* <Test2 /> */}
-      </div>
+  
     </>
   );
 }

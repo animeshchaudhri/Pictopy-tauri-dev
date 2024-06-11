@@ -22,4 +22,5 @@
   },
   "include": ["src", "src-tauri/target"],
   "references": [{ "path": "./tsconfig.node.json" }]
+  
 }

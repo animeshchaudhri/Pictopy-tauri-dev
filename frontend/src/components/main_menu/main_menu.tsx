@@ -1,8 +1,7 @@
-import Datawise from "../datewise/Datawise";
 
 function Main_menu() {
   return (
-    <div className=" w-1/2">
+    <>
       <div className="flex flex-col gap-4 p-6">
         <h1 className="text-4xl text-white">Your Explore of The Week</h1>
         <div className="flex gap-4 ">
@@ -27,8 +26,11 @@ function Main_menu() {
           </button>
         </div>
       </div>
-      <Datawise />
-    </div>
+      {/* <ScrollArea className="flex"> */}
+
+      {/* <Scrollbar orientation="vertical" /> */}
+      {/* </ScrollArea> */}
+    </>
   );
 }
 

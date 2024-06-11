@@ -1,6 +1,8 @@
 function Datawise() {
   const images = [
     { src: "/placeholder1.svg", alt: "Trip to Ladakh 1", date: "May 15, 2023" },
+    { src: "/placeholder1.svg", alt: "Trip to Ladakh 1", date: "May 15, 2023" },
+    { src: "/placeholder1.svg", alt: "Trip to Ladakh 1", date: "May 15, 2023" },
   ];
   return (
     <div className="flex-1 overflow-auto p-6">
