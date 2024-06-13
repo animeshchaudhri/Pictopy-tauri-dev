@@ -1,4 +1,3 @@
-
 function Main_menu() {
   return (
     <>
@@ -26,6 +25,7 @@ function Main_menu() {
           </button>
         </div>
       </div>
+
       {/* <ScrollArea className="flex"> */}
 
       {/* <Scrollbar orientation="vertical" /> */}

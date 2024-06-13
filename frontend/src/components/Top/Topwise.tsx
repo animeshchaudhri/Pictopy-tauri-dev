@@ -1,16 +1,25 @@
-function Topwise() {
-  return <div>
+import Topwiselinks from "./Topwiselinks";
 
-    <h1>Top Photos of Last Month</h1>
-    <div className="flex ">
-    
+import "react-image-gallery/styles/css/image-gallery.css";
 
-    </div>
+import { Carousel2 } from "../gallery/Gallery";
 
+function Topwise(props: any) {
+  return (
+    <>
+      <div className="flex flex-col ">
+        <h1 className="text-large">{props.title}</h1>
+        <Topwiselinks
+          location={props.location}
+          size={props.size}
+          date={props.date}
+        />
+        {/* <ImageGallery items={images} /> */}
 
-
-
-  </div>;
+        <Carousel2 />
+      </div>
+    </>
+  );
 }
 
 export default Topwise;

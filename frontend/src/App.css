@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import "~react-image-gallery/styles/css/image-gallery.css"; */
+
 .loading-container {
   display: flex;
   justify-content: center;
@@ -27,4 +29,9 @@
 }
 .sidebar {
   height: "calc(100vh - 64px)";
+}
+
+.custom-image-gallery {
+  width: 300px;
+  height: 300px;
 }

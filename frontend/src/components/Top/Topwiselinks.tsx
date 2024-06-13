@@ -1,9 +1,9 @@
 function Topwiselinks(props: any) {
   return (
-    <div>
-      {props.location}
-      {props.size}
-      {props.date}
+    <div className="flex ">
+      <li>{props.location}</li>
+      <li>{props.size}</li>
+      <li>{props.date}</li>
     </div>
   );
 }

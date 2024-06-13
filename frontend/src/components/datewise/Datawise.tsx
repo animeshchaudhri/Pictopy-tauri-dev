@@ -1,9 +1,22 @@
 function Datawise() {
   const images = [
-    { src: "/placeholder1.svg", alt: "Trip to Ladakh 1", date: "May 15, 2023" },
-    { src: "/placeholder1.svg", alt: "Trip to Ladakh 1", date: "May 15, 2023" },
-    { src: "/placeholder1.svg", alt: "Trip to Ladakh 1", date: "May 15, 2023" },
+    {
+      src: "https://picsum.photos/id/1018/1000/600/",
+      alt: "Trip to Ladakh 1",
+      date: "May 15, 2023",
+    },
+    {
+      src: "https://picsum.photos/id/1015/1000/600/",
+      alt: "Trip to Ladakh 1",
+      date: "May 15, 2023",
+    },
+    {
+      src: "https://picsum.photos/id/1015/1000/600/",
+      alt: "Trip to Ladakh 1",
+      date: "May 15, 2023",
+    },
   ];
+
   return (
     <div className="flex-1 overflow-auto p-6">
       <div className="flex flex-col gap-6 overflow-y-auto max-h-screen">
