@@ -32,7 +32,7 @@ function Datawise() {
             />
             <div className="absolute inset-0 bg-black/50 flex items-end justify-between px-6 py-4">
               <div className="text-white font-medium">{image.date}</div>
-              <StarIcon className="h-5 w-5 text-white" />
+              <StarIcon className="h-5 w-5 text-white a" />
             </div>
           </div>
         ))}
