@@ -138,3 +138,37 @@
 // };
 
 // export default FileBrowser;
+
+// src/components/FolderPicker.js
+
+import React from "react";
+import { open } from "@tauri-apps/plugin-dialog";
+
+interface FolderPickerProps {
+  setFolderPath: (path: string) => void;
+}
+
+const FolderPicker: React.FC<FolderPickerProps> = ({ setFolderPath }) => {
+  const pickFolder = async () => {
+    try {
+      const selected = await open({
+        directory: true,
+        multiple: false,
+        title: "Select a folder",
+      });
+      if (selected && typeof selected === "string") {
+        setFolderPath(selected);
+      }
+    } catch (error) {
+      console.error("Error picking folder:", error);
+    }
+  };
+
+  return (
+    <div>
+      <button  className="text-white" onClick={pickFolder}>Pick Folder</button>
+    </div>
+  );
+};
+
+export default FolderPicker;

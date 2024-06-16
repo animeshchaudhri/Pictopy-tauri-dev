@@ -1,22 +1,30 @@
-import Datawise from "../components/datewise/Datawise";
+import { useEffect, useState } from "react";
+import Test2 from "../components/Main";
 import Main_menu from "../components/main_menu/main_menu";
-import Navbar from "../components/Navbar/Navbar";
-import Sidebar from "../components/Navbar/Sidebar";
 
-function Dashboard() {
+interface DashboardProps {
+  folderPath?: string;
+}
+
+function Dashboard({ folderPath: propFolderPath }: DashboardProps) {
+  const [folderPath, setFolderPath] = useState<string>("");
+
+  useEffect(() => {
+    console.log("props.folderPath", propFolderPath);
+    const localPath = localStorage.getItem("folderPath");
+    console.log("localPath", localPath);
+    if (localPath && !propFolderPath) {
+      setFolderPath(localPath);
+    } else if (propFolderPath) {
+      setFolderPath(propFolderPath);
+    }
+  }, [propFolderPath]);
+
   return (
     <div>
-      <div className="flex flex-col w-full ">
-        <Navbar />
-        <div className="flex sidebar " style={{ height: "calc(100vh - 64px)" }}>
-          <Sidebar />
-          <div className="flex">
-            <div className=" flex flex-col bg-gray-900 text-white p-4">
-              <Main_menu />
-              <Datawise />
-            </div>
-          </div>
-        </div>
+      <div className="flex flex-col bg-gray-900 text-white p-4">
+        <Main_menu />
+        <Test2 folderPath={folderPath} />
       </div>
     </div>
   );

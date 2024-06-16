@@ -1,18 +1,33 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Layout from "./layout/Layout";
+import InitialPage from "./components/init/Init";
+import LayoutRoutes from "./components/routes";
 
-// import Main_menu from "./components/main_menu/main_menu";
-// import Test2 from "./components/Navbar";
 
-import Dashboard from "./pages/Dashboard";
-// import FileBrowser from "./components/Test";
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isLayoutRoute = ['/files', '/dashboard', '/settings', '/photos', '/videos'].includes(location.pathname);
+
   return (
     <>
-      {/* <FileBrowser /> */}
-      {/* <Test2 />
-       */}
-      <Dashboard />
+      <Routes>
+        <Route path="/" element={<InitialPage />} />
+      </Routes>
+      {isLayoutRoute && (
+        <Layout>
+          <LayoutRoutes />
+        </Layout>
+      )}
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

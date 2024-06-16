@@ -1,44 +1,59 @@
-import Main_menu from "../main_menu/main_menu";
+import { Link } from "react-router-dom";
 
-// import Test2 from "../Navbar";
 function Sidebar() {
   return (
     <>
-     
-        <div className=" flex sidebar flex-col justify-between bg-[#333333] w-40 border-r border-gray-700 dark:border-gray-700 p-4 space-y-4">
-          <div className="flex flex-col mt-2 gap-10">
-            <div className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50">
-              <HomeIcon className="h-5 w-5" />
-              <span className="font-sans">Home</span>
-            </div>
-            <div className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50">
-              <FileIcon className="h-5 w-5" />
-              <span className="font-sans">All Files</span>
-            </div>
-            <div className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50">
-              <ImageIcon className="h-5 w-5" />
-              <span className="font-sans">Photos</span>
-            </div>
-            <div className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50">
-              <VideoIcon className="h-5 w-5" />
-              <span className="font-sans">Videos</span>
-            </div>
-            <div className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50">
-              <AlbumIcon className="h-5 w-5" />
-              <span className="font-sans">Albums</span>
-            </div>
-          </div>
-          <div className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50 mt-auto">
-            <SettingsIcon className="h-5 w-5" />
-            <span className="font-sans">Settings</span>
-          </div>
+      <div className=" flex sidebar flex-col justify-between bg-[#333333] w-40 border-r border-gray-700 dark:border-gray-700 p-4 space-y-4">
+        <div className="flex flex-col mt-2 gap-10">
+          <Link
+            to="/"
+            className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50"
+          >
+            <HomeIcon className="h-5 w-5" />
+            <span className="font-sans">Home</span>
+          </Link>
+          <Link
+            to="/files"
+            className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50"
+          >
+            <FileIcon className="h-5 w-5" />
+            <span className="font-sans">Ai tagging</span>
+          </Link>
+          <Link
+            to="/photos"
+            className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50"
+          >
+            <ImageIcon className="h-5 w-5" />
+            <span className="font-sans">Photos</span>
+          </Link>
+          <Link
+            to="/videos"
+            className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50"
+          >
+            <VideoIcon className="h-5 w-5" />
+            <span className="font-sans">Videos</span>
+          </Link>
+          <Link
+            to="/albums"
+            className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50"
+          >
+            <AlbumIcon className="h-5 w-5" />
+            <span className="font-sans">Albums</span>
+          </Link>
         </div>
-        {/* <Main_menu /> */}
-        {/* <Test2 /> */}
-  
+        <Link
+          to="/settings"
+          className="flex items-center flex-col gap-2 text-white hover:text-gray-50 dark:text-gray-400 dark:hover:text-gray-50 mt-auto"
+        >
+          <SettingsIcon className="h-5 w-5" />
+          <span className="font-sans">Settings</span>
+        </Link>
+      </div>
     </>
   );
 }
+
+// Define other icon components (SettingsIcon, HomeIcon, etc.) as before...
 
 export default Sidebar;
 
