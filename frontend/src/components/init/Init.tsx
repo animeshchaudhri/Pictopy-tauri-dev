@@ -14,12 +14,13 @@ export default function InitialPage() {
     const savedFolderPath = localStorage.getItem("folderPath");
     console.log(savedFolderPath);
     if (savedFolderPath) {
+      console.log(folderPath);
       setFolderPath(savedFolderPath);
       setLoading(false);
-      // Navigate to '/' route after setting folderPath
-      navigate("/files");
+      
+      navigate("/home");
     } else {
-      setLoading(false); // No saved path, loading finished
+      setLoading(false); 
     }
   }, []);
 
@@ -27,7 +28,7 @@ export default function InitialPage() {
     setFolderPath(path);
 
     localStorage.setItem("folderPath", path);
-    navigate("/files");
+    navigate("/home");
   };
 
   return (
@@ -37,13 +38,13 @@ export default function InitialPage() {
         <div>Loading...</div>
       ) : (
         // Initial setup screen with FolderPicker
-        <div className="animate-fade-in-up">
-          <div className="flex flex-col items-center space-y-6">
+        <div className="flex items-center justify-center min-h-screen bg-gray-900">
+          <div className="animate-fade-in-up flex flex-col items-center justify-center space-y-6">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
               <Pitopy className="w-16 h-16 text-gray-900" />
             </div>
             <p className="text-2xl font-bold text-white">Pictopy</p>
-            <p className="text-gray-400">Let's get started</p>
+
             <FolderPicker setFolderPath={handleFolderPathChange} />
           </div>
         </div>

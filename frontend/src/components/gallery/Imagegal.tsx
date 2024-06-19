@@ -4,9 +4,8 @@ import BigImageView from "../bigview";
 
 interface CustomImage {
   src: string;
-  thumbnail: string;
-  thumbnailWidth: number;
-  thumbnailHeight: number;
+  width: number;
+  height: number;
   caption: string;
 }
 
@@ -17,11 +16,11 @@ interface ImageGalleryProps {
 const ImageGalleryxd: React.FC<ImageGalleryProps> = (props) => {
   const [index, setIndex] = useState(-1);
 
-  const handleClick = (index: number, item: CustomImage) => setIndex(index);
+  const handleClick = (index: number, _item: CustomImage) => setIndex(index);
   const handleClose = () => setIndex(-1);
 
   return (
-    <div>
+    <div className="overflow-hidden h-70vh">
       {index === -1 ? (
         <Gallery
           images={props.images}

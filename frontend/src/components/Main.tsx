@@ -45,6 +45,8 @@ const Test2: React.FC<Test2Props> = ({ folderPath }) => {
           const src = await convertFileSrc(file);
           return {
             src,
+            // height: 320,
+            // width: 420,
             thumbnail: src,
 
             caption: `Image ${file}`,

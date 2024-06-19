@@ -2,7 +2,7 @@ import Topwiselinks from "./Topwiselinks";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import { Carousel2 } from "../gallery/Gallery";
+// import { Carousel2 } from "../gallery/Gallery";
 
 function Topwise(props: any) {
   return (
@@ -16,7 +16,7 @@ function Topwise(props: any) {
         />
         {/* <ImageGallery items={images} /> */}
 
-        <Carousel2 />
+        {/* <Carousel2 /> */}
       </div>
     </>
   );

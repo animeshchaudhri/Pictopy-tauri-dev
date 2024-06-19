@@ -1,13 +1,25 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Layout from "./layout/Layout";
 import InitialPage from "./components/init/Init";
 import LayoutRoutes from "./components/routes";
 
-
 function AppContent() {
   const location = useLocation();
-  const isLayoutRoute = ['/files', '/dashboard', '/settings', '/photos', '/videos'].includes(location.pathname);
+  const isLayoutRoute = [
+    "/files",
+    "/dashboard",
+    "/settings",
+    "/photos",
+    "/videos",
+    "/settings",
+    "/home",
+  ].includes(location.pathname);
 
   return (
     <>
