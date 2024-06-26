@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -15,17 +15,48 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "../ui/Pagenation";
-import PhotoAlbum from "react-photo-album";
+import { convertFileSrc, invoke } from "@tauri-apps/api/core";
 
-export default function Component(props: any) {
+export default function VideoGallery(props: any) {
   const [sortBy, setSortBy] = useState("date");
-  const [imagesPerRow, setImagesPerRow] = useState(3);
+  const [videosPerRow, setVideosPerRow] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
-  const [imagesPerPage] = useState(9);
-  const images = props.images;
+  const [videosPerPage] = useState(9);
+  const [videos, setVideos] = useState<any[]>([]);
 
-  const sortedImages = useMemo(() => {
-    return images.sort((a: any, b: any) => {
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const localPath = localStorage.getItem("folderPath");
+        console.log("Fetching videos from folder:", localPath);
+        const videoPaths: string[] = await invoke("get_all_videos_with_cache", {
+          directory: localPath,
+        });
+
+        const videoUrls = await Promise.all(
+          videoPaths.map(async (videoPath) => {
+            const src = await convertFileSrc(videoPath);
+            return {
+              src,
+              original: src,
+              title: `Video ${videoPath}`, 
+              date: new Date().toISOString(), 
+              popularity: 0, 
+            };
+          })
+        );
+
+        setVideos(videoUrls);
+      } catch (error) {
+        console.error("Error fetching videos:", error);
+      }
+    };
+
+    fetchVideos();
+  }, []);
+
+  const sortedVideos = useMemo(() => {
+    return videos.sort((a: any, b: any) => {
       switch (sortBy) {
         case "date":
           return new Date(b.date) - new Date(a.date);
@@ -37,15 +68,17 @@ export default function Component(props: any) {
           return 0;
       }
     });
-  }, [sortBy, images]);
+  }, [sortBy, videos]);
 
-  const indexOfLastImage = currentPage * imagesPerPage;
-  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = sortedImages.slice(indexOfFirstImage, indexOfLastImage);
-  const totalPages = Math.ceil(sortedImages.length / imagesPerPage);
+  const indexOfLastVideo = currentPage * videosPerPage;
+  const indexOfFirstVideo = indexOfLastVideo - videosPerPage;
+  const currentVideos = sortedVideos.slice(indexOfFirstVideo, indexOfLastVideo);
+  const totalPages = Math.ceil(sortedVideos.length / videosPerPage);
 
-  const handlePageChange = (pageNumber: any) => {
-    setCurrentPage(pageNumber);
+  const handlePageChange = (pageNumber: number) => {
+    if (pageNumber >= 1 && pageNumber <= totalPages) {
+      setCurrentPage(pageNumber);
+    }
   };
 
   const getPageNumbers = () => {
@@ -79,13 +112,13 @@ export default function Component(props: any) {
   return (
     <div className="dark:bg-background dark:text-foreground max-w-6xl mx-auto px-4 md:px-6 py-8">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">{props.title}</h1>
+        <h1 className="text-2xl font-bold">Video Gallery</h1>
         <div className="flex items-center gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="flex items-center gap-2">
                 <LayoutGridIcon className="w-4 h-4" />
-                {imagesPerRow} per row
+                {videosPerRow} per row
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -93,8 +126,8 @@ export default function Component(props: any) {
               align="end"
             >
               <DropdownMenuRadioGroup
-                value={imagesPerRow.toString()}
-                onValueChange={(value) => setImagesPerRow(parseInt(value))}
+                value={videosPerRow.toString()}
+                onValueChange={(value) => setVideosPerRow(parseInt(value))}
               >
                 <DropdownMenuRadioItem value="2">
                   2 per row
@@ -134,33 +167,30 @@ export default function Component(props: any) {
       </div>
       <div
         className={`grid gap-4 md:gap-6 ${
-          imagesPerRow === 2
+          videosPerRow === 2
             ? "grid-cols-1 sm:grid-cols-2"
-            : imagesPerRow === 3
+            : videosPerRow === 3
             ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
             : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         }`}
       >
-        {currentImages.map((image: any) => (
+        {currentVideos.map((video: any) => (
           <div
-            key={image.id}
+            key={video.src}
             className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 ease-in-out dark:bg-card dark:text-card-foreground"
           >
             <a href="#" className="absolute inset-0 z-10">
               <span className="sr-only">View</span>
             </a>
-            <img
-              src={image.src}
-              alt={image.title}
-              width={500}
-              height={400}
+            <video
+              controls
+              src={video.src}
               className="object-cover w-full h-64 transition-opacity duration-300"
-              style={{ opacity: 1 }} // Initial opacity set to 1
             />
             <div className="p-4 dark:bg-card dark:text-card-foreground">
-              <h3 className="text-xl font-bold">{image.title}</h3>
+              <h3 className="text-xl font-bold">{video.title}</h3>
               <p className="text-sm text-muted-foreground">
-                {new Date(image.date).toLocaleDateString()}
+                {new Date(video.date).toLocaleDateString()}
               </p>
             </div>
           </div>
@@ -170,13 +200,13 @@ export default function Component(props: any) {
         <Pagination>
           <PaginationPrevious
             onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
+            // disabled={currentPage === 1}
           />
           <PaginationContent>
             {getPageNumbers().map((page, index) =>
               page === "..." ? (
                 <PaginationItem key={index}>
-                  <PaginationLink isDisabled>{page}</PaginationLink>
+                  <PaginationLink >{page}</PaginationLink>
                 </PaginationItem>
               ) : (
                 <PaginationItem key={index}>
@@ -200,7 +230,7 @@ export default function Component(props: any) {
   );
 }
 
-function LayoutGridIcon(props) {
+function LayoutGridIcon(props: any) {
   return (
     <svg
       {...props}
@@ -222,7 +252,7 @@ function LayoutGridIcon(props) {
   );
 }
 
-function ListOrderedIcon(props) {
+function ListOrderedIcon(props: any) {
   return (
     <svg
       {...props}

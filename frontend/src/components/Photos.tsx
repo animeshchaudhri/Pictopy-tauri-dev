@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { convertFileSrc, invoke } from "@tauri-apps/api/core";
-import ImageGalleryxd from "./gallery/Imagegal";
-import { Gallery } from "react-grid-gallery";
+// import ImageGalleryxd from "./gallery/Imagegal";
+// import { Gallery } from "react-grid-gallery";
 import Gallerynav from "./Navbar/Gallerynav";
 
 const Photos: React.FC = () => {
@@ -9,7 +9,7 @@ const Photos: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 9;
-
+  const localPath = localStorage.getItem("folderPath");
   useEffect(() => {
     const fetchImages = async () => {
       try {
@@ -28,6 +28,9 @@ const Photos: React.FC = () => {
               // width: 420,
               // height: 212,
               caption: `Image ${imagePath}`,
+              title: `Video ${imagePath}`,
+              date: new Date().toISOString(),
+              popularity: 0,
             };
           })
         );
@@ -75,7 +78,7 @@ const Photos: React.FC = () => {
 
   return (
     <div>
-      <Gallerynav images={images} />
+      <Gallerynav images={images} title={localPath} />
       <button onClick={handleDeleteCache}>Delete Cache</button>
       {/* <ImageGalleryxd images={paginatedImages} />
       <div className="flex justify-center mt-4">

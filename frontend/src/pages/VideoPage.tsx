@@ -1,9 +1,11 @@
 // import React from 'react'
-
+import Video from "../features/Video";
 function VideoPage() {
   return (
-    <div>VideoPage</div>
-  )
+    <div>
+      <Video />
+    </div>
+  );
 }
 
-export default VideoPage
+export default VideoPage;
