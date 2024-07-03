@@ -1,5 +1,6 @@
-E:\photos\helo\VID_20231105_131353.mp4
-E:\photos\helo\VID_20231105_133757.mp4
-E:\photos\helo\VID_20231105_140745.mp4
-E:\photos\helo\VID_20231105_143751.mp4
-E:\photos\helo\VID_20231105_143930.mp4
+D:\New folder\SadTalker\examples\ref_video\WDA_AlexandriaOcasioCortez_000.mp4
+D:\New folder\SadTalker\examples\ref_video\WDA_KatieHill_000.mp4
+D:\New folder\SadTalker\venv\Lib\site-packages\imageio\resources\images\cockatoo.mp4
+D:\New folder\SadTalker\venv\Lib\site-packages\imageio\resources\images\realshort.mp4
+D:\Riot Games\VALORANT\live\ShooterGame\Content\Movies\Menu\EP8A2_805_Homescreen.mp4
+D:\Riot Games\VALORANT\live\ShooterGame\Content\Movies\Menu\EP8A3_811_Homescreen.mp4

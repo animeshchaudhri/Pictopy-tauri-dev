@@ -17,7 +17,7 @@ import {
 } from "../ui/Pagenation";
 import { convertFileSrc, invoke } from "@tauri-apps/api/core";
 
-export default function VideoGallery(props: any) {
+export default function VideoGallery() {
   const [sortBy, setSortBy] = useState("date");
   const [videosPerRow, setVideosPerRow] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
