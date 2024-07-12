@@ -37,8 +37,20 @@ impl CacheService {
     }
 
     pub fn delete_all_caches(&self) -> bool {
-        CacheRepository::delete_cache(FOLDERS_CACHE_FILE_PATH).is_ok() &&
-        CacheRepository::delete_cache(IMAGES_CACHE_FILE_PATH).is_ok() &&
-        CacheRepository::delete_cache(VIDEOS_CACHE_FILE_PATH).is_ok()
+        let mut success = false;
+
+        if CacheRepository::delete_cache(FOLDERS_CACHE_FILE_PATH).is_ok() {
+            success = true;
+        }
+
+        if CacheRepository::delete_cache(IMAGES_CACHE_FILE_PATH).is_ok() {
+            success = true;
+        }
+
+        if CacheRepository::delete_cache(VIDEOS_CACHE_FILE_PATH).is_ok() {
+            success = true;
+        }
+
+        success
     }
 }

@@ -1,46 +1,12 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import Layout from "./layout/Layout";
-import InitialPage from "./components/init/Init";
-import LayoutRoutes from "./components/routes";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { AppRoutes } from "./routes/AppRoutes";
+import "./App.css";
 
-function AppContent() {
-  const location = useLocation();
-  const isLayoutRoute = [
-    "/files",
-    "/dashboard",
-    "/settings",
-    "/photos",
-    "/videos",
-    "/settings",
-    "/home",
-  ].includes(location.pathname);
-
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<InitialPage />} />
-      </Routes>
-      {isLayoutRoute && (
-        <Layout>
-          <LayoutRoutes />
-        </Layout>
-      )}
-    </>
-  );
-}
-
-function App() {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
-  );
-}
-
+const App: React.FC = () => (
+  <Router>
+    <AppRoutes />
+  </Router>
+);
 export default App;

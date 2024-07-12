@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import FolderPicker from "../Test";
 
-// import Dashboard from "../../pages/Dashboard";
+
 
 export default function InitialPage() {
   const [loading, setLoading] = useState(true);

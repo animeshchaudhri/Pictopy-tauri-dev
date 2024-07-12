@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { convertFileSrc, invoke } from "@tauri-apps/api/core";
-// import ImageGalleryxd from "./gallery/Imagegal";
-// import { Gallery } from "react-grid-gallery";
+
 import Gallerynav from "./Navbar/Gallerynav";
 
 const Photos: React.FC = () => {
   const [images, setImages] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 9;
+
   const localPath = localStorage.getItem("folderPath");
   useEffect(() => {
     const fetchImages = async () => {
@@ -57,21 +55,6 @@ const Photos: React.FC = () => {
     }
   };
 
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const handleNextPage = () => {
-    if (currentPage < Math.ceil(images.length / imagesPerPage)) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const startIndex = (currentPage - 1) * imagesPerPage;
-  const paginatedImages = images.slice(startIndex, startIndex + imagesPerPage);
-
   if (loading) {
     return <div>Loading images...</div>;
   }
@@ -80,23 +63,6 @@ const Photos: React.FC = () => {
     <div>
       <Gallerynav images={images} title={localPath} />
       <button onClick={handleDeleteCache}>Delete Cache</button>
-      {/* <ImageGalleryxd images={paginatedImages} />
-      <div className="flex justify-center mt-4">
-        <button
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
-          className="mr-2 p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-        >
-          Previous
-        </button>
-        <button
-          onClick={handleNextPage}
-          disabled={currentPage === Math.ceil(images.length / imagesPerPage)}
-          className="p-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-        >
-          Next
-        </button>
-      </div> */}
     </div>
   );
 };

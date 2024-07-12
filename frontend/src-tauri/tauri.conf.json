@@ -14,11 +14,12 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "createUpdaterArtifacts": "v1Compatible"
   },
-  "productName": "image-gallery",
+  "productName": "tauri-app",
   "version": "0.0.0",
-  "identifier": "ccaa.caa",
+  "identifier": "com.tauri.dev",
   "plugins": {},
   "app": {
     "windows": [
@@ -31,6 +32,7 @@
       }
     ],
     "security": {
+   
       "assetProtocol": {
         "scope": [
           "**"
@@ -38,9 +40,7 @@
         "enable": true
       },
       "csp": null
-    },
-    "macOSPrivateApi": true
+    }
     
   }
-  
 }
