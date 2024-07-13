@@ -2,8 +2,8 @@ import sqlite3
 import os
 import json
 
-from app.config.settings import IMAGES_PATH, IMAGES_DATABASE_PATH
-from app.utils.classification import get_classes2
+from app.config.settings import IMAGES_PATH, IMAGES_DATABASE_PATH, MAPPINGS_DATABASE_PATH
+from app.utils.classification import get_classes
 from app.utils.metadata import extract_metadata
 
 
@@ -25,13 +25,12 @@ def create_images_table():
         SELECT path FROM images
     """)
     db_paths = [row[0] for row in cursor.fetchall()]
-    print(db_paths)
     # Go through the images folder and print paths not present in the database
     for filename in os.listdir(IMAGES_PATH):
         file_path = os.path.abspath(os.path.join(IMAGES_PATH, filename))
         if file_path not in db_paths:
             print(f"Not in database: {file_path}")
-            class_ids = get_classes2(file_path)
+            class_ids = get_classes(file_path)
             metadata = extract_metadata(file_path)
             insert_image_db(file_path, class_ids, metadata)
         else:
@@ -80,27 +79,44 @@ def get_all_image_paths_from_db():
     return paths
 
 def get_objects_db(path):
-    conn = sqlite3.connect(IMAGES_DATABASE_PATH)
-    cursor = conn.cursor()
+    conn_images = sqlite3.connect(IMAGES_DATABASE_PATH)
+    cursor_images = conn_images.cursor()
 
-    # convert to absolute path
     abs_path = os.path.abspath(path)
 
-    # get the id based on key (path)
-    cursor.execute("""
+    cursor_images.execute("""
         SELECT class_ids FROM images WHERE path = ?
     """, (abs_path,))
 
-    result = cursor.fetchone()
-    conn.close()
+    result = cursor_images.fetchone()
+    conn_images.close()
 
-    if result:
-        class_ids_json = result[0]
-        class_ids = json.loads(class_ids_json)
-        return class_ids
-    else:
+    if not result:
         return None
-    
+
+    class_ids_json = result[0]
+    class_ids = json.loads(class_ids_json)
+    class_ids = class_ids.split(",")
+    print(class_ids, type(class_ids), flush=True)
+
+    conn_mappings = sqlite3.connect(MAPPINGS_DATABASE_PATH)
+    cursor_mappings = conn_mappings.cursor()
+    class_names = []
+    for class_id in class_ids:
+        cursor_mappings.execute("""
+            SELECT name FROM mappings WHERE class_id = ?
+        """, (class_id,))
+        name_result = cursor_mappings.fetchone()
+        if name_result:
+            class_names.append(name_result[0])
+        #  else:
+        #      print(f"UNKNOWN ID --> {class_id}" , flush=True)
+        #      class_names.append(f"Unknown (ID: {class_id})")
+
+    conn_mappings.close()
+    class_names = list(set(class_names))
+    return class_names
+
 def is_image_in_database(path):
     conn = sqlite3.connect(IMAGES_DATABASE_PATH)
     cursor = conn.cursor()
