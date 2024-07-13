@@ -1,3 +1,6 @@
+// File: components/PhotoGallery/SortingControls.tsx
+
+import React from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -5,64 +8,65 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { LayoutGridIcon, ListOrderedIcon } from "@/components/Icons/Icons";
+import { ListOrderedIcon } from "@/components/Icons/Icons";
 import { Button } from "@/components/ui/button";
 import { SortingControlsProps } from "@/types/image";
 
-export default function SortingControls({
+interface YearOption {
+  value: string;
+  label: string;
+}
+
+const SortingControls: React.FC<SortingControlsProps> = ({
   sortBy,
   setSortBy,
-  imagesPerRow,
-  setImagesPerRow,
-}: SortingControlsProps) {
+  images,
+}) => {
+  const handleSortChange = (value: string) => {
+    setSortBy(value);
+  };
+
+  // Extract years from image data
+  const years = images.reduce<string[]>((acc, curr) => {
+    const year = new Date(curr.date).getFullYear().toString();
+    if (!acc.includes(year)) {
+      acc.push(year);
+    }
+    return acc;
+  }, []);
+
+  // Sort years in descending order
+  years.sort((a, b) => parseInt(b) - parseInt(a));
+
+  // Generate year options for dropdown
+  const yearOptions: YearOption[] = years.map((year) => ({
+    value: `year-${year}`,
+    label: year,
+  }));
+
   return (
-    <div className="flex items-center gap-4">
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center gap-2">
-            <LayoutGridIcon className="w-4 h-4" />
-            {imagesPerRow} per row
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          className="w-[200px] bg-white dark:text-foreground"
-          align="end"
-        >
-          <DropdownMenuRadioGroup
-            value={imagesPerRow.toString()}
-            onValueChange={(value: string) => setImagesPerRow(parseInt(value))}
-          >
-            <DropdownMenuRadioItem value="2">2 per row</DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="3">3 per row</DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="4">4 per row</DropdownMenuRadioItem>
-          </DropdownMenuRadioGroup>
-        </DropdownMenuContent>
-      </DropdownMenu>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center gap-2">
-            <ListOrderedIcon className="w-4 h-4" />
-            Sort by {sortBy}
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          className="w-[200px] bg-white dark:text-foreground"
-          align="end"
-        >
-          <DropdownMenuRadioGroup
-            value={sortBy}
-            onValueChange={(value: string) =>
-              setSortBy(value as "date" | "title" | "popularity")
-            }
-          >
-            <DropdownMenuRadioItem value="date">Date</DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="title">Title</DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value="popularity">
-              Popularity
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" className="flex items-center gap-2">
+          <ListOrderedIcon className="w-4 h-4" />
+          Sort by {sortBy}
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        className="w-[200px] bg-white dark:text-foreground"
+        align="end"
+      >
+        <DropdownMenuRadioGroup value={sortBy} onValueChange={handleSortChange}>
+          <DropdownMenuRadioItem value="date">Date</DropdownMenuRadioItem>
+          {yearOptions.map((option) => (
+            <DropdownMenuRadioItem key={option.value} value={option.value}>
+              {option.label}
             </DropdownMenuRadioItem>
-          </DropdownMenuRadioGroup>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
+          ))}
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
-}
+};
+
+export default SortingControls;

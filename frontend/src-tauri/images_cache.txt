@@ -1,55 +1,810 @@
-C:\Users\Asus\Downloads\(\432605853_669906558502805_2020386952915273964_n.jpeg
-C:\Users\Asus\Downloads\(\e6091a7c-5d9d-4720-9bf7-9bc8ade59ea6.jpeg
-C:\Users\Asus\Downloads\(\instagram_ad (1).png
-C:\Users\Asus\Downloads\(\instagram_ad (2).png
-C:\Users\Asus\Downloads\(\instagram_ad (3).png
-C:\Users\Asus\Downloads\(\instagram_ad.png
-C:\Users\Asus\Downloads\(\SAVE_20240121_212947.jpg
-C:\Users\Asus\Downloads\(\Screenshot 2024-01-20 102149.png
-C:\Users\Asus\Downloads\(\Screenshot 2024-01-22 140147_16x9.png
-C:\Users\Asus\Downloads\(\Screenshot 2024-04-04 003245.png
-C:\Users\Asus\Downloads\(\Screenshot 2024-04-04 003406.png
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 10.54.40_692c97a1.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 10.58.24_eca94246.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 11.04.53_e03fdfd7.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 12.08.45_62459bb7.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 12.08.45_bc81754f.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 12.19.37_053c78a9.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 20.13.24_21ce1cc8.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 20.13.25_fa1ad419.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 20.13.26_20d69007.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-02-24 at 20.13.26_2c3d2820.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-02 at 03.01.11_9839b47e.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-02 at 03.01.12_6072d980.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-02 at 03.02.15_18c2aec8.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-10 at 22.05.43_17619610.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-10 at 22.05.44_8c5dc101.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-10 at 22.05.45_6d2cc67c.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-11 at 19. (1).jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-11 at 19..jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-11 at 19.42.03_8d1a02cc.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-11 at 19.42.06_265675ff.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-11 at 19.42.06_e6db4ad1.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-11 at 19.50.47_a36a4276.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-11 at 19.52.45_ca4e2e64.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-25 at 20.53.21_2e000603.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-03-25 at 20.53.22_4d344cd4.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-04 at 00.29.08_4dafe09d.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-04 at 00.29.08_5c385f32.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-04 at 00.29.08_7183a3ad.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-04 at 00.29.09_f730ab0c.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-07 at 22.03.49_5462a52d.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-07 at 22.03.50_cf40b4af.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-07 at 22.03.50_fe4ebb61.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-07 at 22.03.51_aef8989b.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-07 at 22.03.51_dc3cf0fa.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-04-07 at 22.07.51_8e21a79c.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-05 at 18.06.42_6a63919f.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-07 at 20.33.45_dd66cdf2.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-12 at 19.07.35_1696577b.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-12 at 19.07.35_3381ecec.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-12 at 19.07.35_b1206159.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-12 at 19.10.25_8b6e7212.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-12 at 19.12.13_2396dfc3.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-12 at 19.15.08_dbe00885.jpg
-C:\Users\Asus\Downloads\(\WhatsApp Image 2024-05-12 at 19.15.08_f0810b8f.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-02 193653.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-02 194249.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-02 220723.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-03 013210.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-05 012734.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-07 010903.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-07 090136.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-07 231137.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-08 005110.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-09 015042.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-09 015050.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-09 030720.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-09 030755.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-09 030917.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-12 190928.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-12 205727.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-12 233028.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-13 114852.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-13 210337.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-13 210341.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-14 040921.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-14 041628.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-15 124257.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-15 205611.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-16 225401.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-16 225625.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-16 225704.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-19 083150.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-19 083157.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-22 003512.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-22 003621.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-22 003801.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-22 100724.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-22 235829.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-23 000009.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-23 000128.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-23 000132.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-25 120529.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-25 120936.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-25 122106.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-26 204704.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-06-26 215104.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-07-05 000736.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-07-08 025100.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-07-08 032453.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-07-08 032518.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-07-08 050042.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-07-09 213946.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240302_11_12_46_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-01 194742.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-02 011758.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-02 011855.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-02 011859.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-02 160952.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-05 100604.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-11 125933.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-11 131105.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-11 132620.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 123228.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 125335.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 130926.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 131506.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 131512.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 131608.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 131636.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 131903.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 132043.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 132157.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-12 132257.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-13 153627.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-13 153644.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-15 005732.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-15 005951.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-15 010007.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-18 113458.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-18 131411.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-20 105257.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-24 184120.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-24 184127.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-24 184139.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-24 224532.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-26 224023.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-27 200341.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-30 170826.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-30 225436.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-31 153303.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-03-31 185714.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-04 082417.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-04 082730.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-04 082824.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-04 082841.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-04 220125.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-05 225756.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-06 215902.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-12 224928.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-15 185907.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-15 192557.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-15 213427.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-15 213531.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-15 213550.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-15 213602.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-16 104825.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-16 210402.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-19 210602.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-19 210606.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-20 163128.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-20 163137.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-20 175902.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-21 134058.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-23 013049.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-25 011305.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-26 011225.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-26 141346.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-27 013312.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-28 011150.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-29 232225.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-30 004938.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-05-31 052408.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240416_09_36_03_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240424_11_49_05_Pro.jpg
+C:\Users\Asus\Pictures\Screenshot 2024-02-07 203125.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-01 201926.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-01 201931.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-01 201941.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-02 152207.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-02 171233.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-03 190544.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 003245.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 003406.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 134856.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 145811.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 194023.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 221513.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 221556.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 223148.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-04 224051.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-05 183858.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-06 210229.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-12 125851.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-12 231042.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-12 231406.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-25 054522.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-25 054553.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-25 054824.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-25 054841.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-25 055103.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-26 173301.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-26 175809.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-26 233306.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-27 000845.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-27 000902.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-27 000908.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-28 115729.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-04-28 115936.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240109_16_51_01_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240109_16_51_03_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240109_16_51_07_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-01 231734.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-01 231827.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-03 002140.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-03 142620.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-03 224603.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-04 155040.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-04 155107.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-06 212950.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-10 092322.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-20 102149.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-20 103755.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-20 165938.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-20 172410.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-20 183530.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-21 033704.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-21 033711.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-21 033900.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-21 034302.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-21 034653.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-22 140141.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-22 140147.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240210_02_26_53_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240210_02_26_57_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20240216_23_09_05_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-04 121558.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-05 134453.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-05 140703.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-07 201620.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-07 203125.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-07 203133.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-08 144752.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-08 144933.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-13 165749.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-14 103537.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-14 103618.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-14 103624.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-16 114137.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-16 150540.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-16 151039.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-16 201039.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-16 201108.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 164446.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 164524.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 165052.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 165826.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 170301.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 170323.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 170338.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 170608.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-25 171232.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-02-27 094408.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_17102022_224315.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_17102022_224618.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_17102022_224658.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_17102022_224703.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_18102022_094651.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_18102022_095731.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_18102022_102343.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_18102022_102346.png
+C:\Users\Asus\Pictures\Cyberpunk 2077\photomode_18102022_102511.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221024_082429.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221025_093242.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221025_094531.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221025_095402.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221025_095415.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221025_095424.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221025_095432.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221025_121744.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221028_014127.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_041347.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_083732.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_091150.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_091623.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_091636.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_091851.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_092136.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221106_092743.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221120_102952.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221123_090803.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221127_033747.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221129_014524.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221129_123717.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221129_123724.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20221222_20_30_20_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20221222_20_30_22_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221204_100149.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221204_100446.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221204_115027.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221214_091316.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221215_103530.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221215_103712.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_011344.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_011729.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_012351.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_012358.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_012439.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_012452.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_094146.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_094152.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_094201.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221219_095156.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_100339.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_100637.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_102109.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_102615.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_102652.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_102754.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_103249.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_103315.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_103524.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_104048.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_104052.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_104058.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_104105.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_104244.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_104248.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_105127.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_105228.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_105641.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_105849.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_112147.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_112202.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_112208.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_114502.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221226_115410.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221227_101757.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221228_072134.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20221228_072226.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-15 213013.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-15 213021.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-15 213411.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-15 220917.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-15 220923.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 195620.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 195930.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 195951.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 202421.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 202514.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 202536.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 203739.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 203759.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 203826.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 211550.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-21 212228.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-23 231135.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 173607.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 174040.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 174204.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 174356.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 180601.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 180809.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 181423.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 182837.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 182945.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 183055.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 211428.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 211523.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 211614.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 220627.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 220637.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 220914.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 223613.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 223635.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 225931.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 230010.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 230100.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 230440.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 230818.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 230927.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 231025.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 231057.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 232610.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 232650.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 232657.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 232802.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 232914.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 233608.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 234957.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 235221.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 235246.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 235257.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 235524.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 235629.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 235706.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-26 235815.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-27 001723.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-27 001813.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-27 120059.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-03-27 120209.png
+C:\Users\Asus\Pictures\d9i5pd5-e11e8e90-dda5-40c0-a1d3-566da6f6e174.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-07 213143.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-07 213202.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-13 220125.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-19 194651.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-19 212814.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-19 220643.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-20 165127.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-20 170700.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-22 003855.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-22 004056.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-22 232444.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-24 153338.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-24 233718.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 000516.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 001112.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 001605.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 001705.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 002905.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 002953.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 003001.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 003042.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-25 003124.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-29 174305.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-30 172309.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-04-30 172426.png
+C:\Users\Asus\Pictures\the_eclipse___berserk_by_vizardgirl_de8fapg-fullview.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-06-05 200022.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-06-15 202412.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-06-17 021549.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20230206_12_32_28_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20230206_12_32_28_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20230206_12_32_29_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_060231.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_060427.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_061001.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_061531.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_061538.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_061735.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_061910.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_063322.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_063701.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_063828.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_063920.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_064154.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230205_104334.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230206_123815.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230206_123855.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230206_124206.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230211_054158.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230213_042152.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230213_042312.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230213_101315.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230213_101339.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230213_101345.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230213_101731.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230216_094614.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230216_095731.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230216_095940.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230216_095944.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230216_095948.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230216_100449.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230217_052749.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230217_055013.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_041821.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_041922.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_042035.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_042109.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_042123.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_042127.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_042159.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_042315.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_042334.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_122552.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_124316.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230221_124323.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_103717.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_103734.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_103751.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_103809.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_103823.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_103837.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_103901.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_110834.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_110905.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_110940.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_111213.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_111320.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_111401.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_111414.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_111432.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_111444.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_112409.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_113529.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_113736.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_114132.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230222_114212.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230224_073255.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230224_073303.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230224_073309.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230225_084653.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230225_085110.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230225_085115.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230225_085126.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230106_023057.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_083656.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_090450.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_090453.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_090458.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_090927.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_090933.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_092803.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_093006.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_093310.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_102315.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_102707.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_102712.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_103318.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_103413.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_103515.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_103648.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_103651.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_104047.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_104356.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_104439.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_104454.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_104822.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_104828.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_104944.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_105125.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_105242.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_105251.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_105515.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_105740.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_105935.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_105956.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230109_110138.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230113_114216.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230113_114233.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230113_114642.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230113_114955.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230113_115102.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230113_115201.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230113_115251.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230115_052754.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230117_022336.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230118_032442.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230129_104326.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot_20230131_093207.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_12_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_13_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_14_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_14_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_15_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_15_Pro (3).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_15_Pro (4).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_15_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_16_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_16_Pro (3).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_16_Pro (4).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_16_Pro (5).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_16_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_17_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_17_Pro (3).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_35_17_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_39_34_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_39_34_Pro (3).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_39_34_Pro (4).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231208_17_39_34_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-03 122937.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-03 130959.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-03 131634.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-03 143005.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-03 144707.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 111336.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 111933.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 115410.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 121516.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 121823.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 121829.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 170903.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 170948.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 170956.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-05 171423.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-08 102810.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-08 110927.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-08 111323.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-08 111507.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-08 113738.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-08 114210.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-08 115050.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-10 130127.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-11 213136.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-11 213159.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-11 215726.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-13 160244.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-13 160249.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-13 160941.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-13 161634.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-13 161702.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-13 164505.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-13 210709.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-16 145525.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-16 151706.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-16 155259.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-17 202011.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-17 203010.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-17 203025.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-18 192432.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 170832.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 173343.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 174850.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 180515.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 182848.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 183108.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 183446.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 183612.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-19 222620.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-23 110924.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-23 111055.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-23 123008.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-23 233448.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-24 130734.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-25 085805.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-25 091105.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-25 183401.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-25 183407.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-26 133123.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-26 195330.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-26 213018.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-26 213038.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-28 221839.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 003238.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 202013.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 211547.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 213850.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 215401.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 215644.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 215850.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 220216.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 222047.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-29 223104.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-30 150121.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-30 150129.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-30 150147.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-12-31 135803.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2024-01-01 013143.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot (1).png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-03 100534.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-09 002213.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-09 003946.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-09 004120.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-09 004255.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-10 093450.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-10 093523.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-10 133129.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-10 133136.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 071747.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 072004.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 072010.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 072426.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 073100.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 073134.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 074630.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-11 080425.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 103337.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 121315.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 183424.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 183431.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 184833.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 184854.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 185010.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 190304.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 190746.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 190753.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 192535.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 192543.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 192732.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 223049.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 223311.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 223458.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 224042.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 224153.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 224341.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 224532.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 224710.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 224836.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225020.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225209.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225214.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225409.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225515.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225659.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225739.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-15 225854.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-23 093510.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-23 093741.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-23 093808.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-23 093826.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-24 100108.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-24 100451.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-24 211017.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-24 211429.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-24 211541.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-24 212627.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 060454.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 060501.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 060600.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 060638.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 061107.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 061237.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 061524.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 061545.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 061612.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 061924.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 062001.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 062024.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 062047.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 062806.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 062944.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 063145.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-25 063638.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211001.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211547.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211627.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211633.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211644.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211828.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211901.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 211908.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 212012.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-05-27 233244.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_33_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_33_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_34_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_34_Pro (3).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_34_Pro (4).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_34_Pro (5).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_34_Pro (6).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_34_Pro (7).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_34_Pro.jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_35_Pro (2).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_35_Pro (3).jpg
+C:\Users\Asus\Pictures\Camera Roll\WIN_20231102_16_41_35_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-11-09 134047.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-11-09 135933.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-11-09 140257.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-11-14 211226.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-11-14 211846.png
+C:\Users\Asus\Pictures\Camera Roll\WIN_20230928_15_19_20_Pro.jpg
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-04 174325.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-04 174333.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-07 142408.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-07 161347.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-08 152305.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-08 152639.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-08 153016.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-08 153405.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-08 153808.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-08 153820.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-08 154430.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-12 173315.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-12 173321.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-12 173355.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-12 173415.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-12 173437.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-16 144946.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233006.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233135.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233143.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233248.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233335.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233356.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233423.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233443.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233506.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233520.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233553.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233617.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233638.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233724.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233743.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-21 233800.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-09-22 135752.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-17 011131.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-17 012331.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-17 012617.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-17 012622.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-17 021410.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-20 101958.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-20 144337.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-20 201844.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-20 212529.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-21 144459.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-22 145532.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-23 210934.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-24 021755.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-24 024651.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-24 115105.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-24 115442.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-26 140728.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-26 145642.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-27 110931.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-07-27 111828.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-01 165007.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-01 202500.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-01 202514.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-01 210629.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-01 211051.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-02 103403.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-02 183223.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-02 185434.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-02 185443.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-02 193232.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-02 203052.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-03 122549.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-03 122554.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-05 143629.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-06 183340.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 205111.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 20511qa1.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 205148.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 205714.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 205726.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 210923.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 211359.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-07 212249.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-08 161112.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-09 004516.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-09 004825.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-14 020547.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-14 191307.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-15 003648.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-15 125232.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 163607.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 170529.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 171636.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 171648.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 171831.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 171903.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 172019.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 172027.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 173257.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-17 235443.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 005218.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 022255.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 022336.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 024526.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 024813.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 024932.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 024940.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 025053.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 025058.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 025145.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-18 025243.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-21 201824.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-25 220431.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-25 220737.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-25 220807.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-25 221100.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-25 221410.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-30 014420.png
+C:\Users\Asus\Pictures\Screenshots\Screenshot 2023-10-30 014424.png
+C:\Users\Asus\Pictures\Screenshots\tordownload.png

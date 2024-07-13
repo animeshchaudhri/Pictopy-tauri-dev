@@ -127,11 +127,11 @@ def delete_image(payload: dict):
 def get_all_image_objects():
     try:
         image_paths = get_all_image_paths_from_db()
-        
+        print(image_paths)
         data = {}
         for image_path in image_paths:
             classes = get_objects_db(image_path)
-            #  print(image_path, classes)
+            # print(image_path, classes)
             if classes:
                 class_ids = classes[1:-1].split()
                 class_ids = list(set(class_ids))

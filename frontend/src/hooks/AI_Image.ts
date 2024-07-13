@@ -32,7 +32,7 @@ const useAIImage = (folderPath: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulating fetching data, replace with actual API call if needed
+      
         const allImageObjects = initialData;
 
         const parsedAndSortedImages = parseAndSortImageData(allImageObjects);

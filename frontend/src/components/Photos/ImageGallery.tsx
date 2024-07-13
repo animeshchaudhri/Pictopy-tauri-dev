@@ -1,17 +1,17 @@
 // File: components/Images/ImageGallery.tsx
 
-import { useState, useMemo } from "react";
-
+import React, { useState, useMemo } from "react";
 import { sortImages } from "@/utils/imageUtils";
 import SortingControls from "./PhotoGallery/SortingControls";
 import ImageGrid from "./PhotoGallery/ImageGrid";
 import ImageView from "./PhotoGallery/PhotosView";
 import PaginationControls from "../Videos/VideoGallery/Pagination";
-
 import { ImageGalleryProps } from "@/types/image";
 
 export default function ImageGallery({ images, title }: ImageGalleryProps) {
-  const [sortBy, setSortBy] = useState<"date" | "title" | "popularity">("date");
+  const currentYear = new Date().getFullYear().toString();
+
+  const [sortBy, setSortBy] = useState<"date" | string>("date"); // Default sorting by 'date'
   const [imagesPerRow, setImagesPerRow] = useState<number>(3);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [showImageViewer, setShowImageViewer] = useState<boolean>(false);
@@ -40,12 +40,11 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
   return (
     <div className="dark:bg-background dark:text-foreground max-w-6xl mx-auto px-4 md:px-6 py-8">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">{title}</h1>
+        <h1 className="text-2xl font-bold">{title || currentYear}</h1>
         <SortingControls
           sortBy={sortBy}
           setSortBy={setSortBy}
-          imagesPerRow={imagesPerRow}
-          setImagesPerRow={setImagesPerRow}
+          images={images}
         />
       </div>
       <ImageGrid

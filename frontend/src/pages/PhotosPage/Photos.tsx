@@ -6,7 +6,7 @@ import ImageGallery from "@/components/Photos/ImageGallery";
 const Photos: React.FC = () => {
   const localPath = localStorage.getItem("folderPath") || "";
   const { images, loading } = useImages(localPath);
-
+  
   if (loading) {
     return <div>Loading images...</div>;
   }
