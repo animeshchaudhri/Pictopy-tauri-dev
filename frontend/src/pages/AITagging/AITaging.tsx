@@ -1,4 +1,4 @@
-import AIGallery from "@/components/Photos/AIgallery";
+import AIGallery from "@/components/AITagging/AIgallery";
 
 import useAIImage from "@/hooks/AI_Image";
 

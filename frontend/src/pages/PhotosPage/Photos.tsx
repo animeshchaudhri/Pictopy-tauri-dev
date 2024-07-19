@@ -1,15 +1,15 @@
 import React from "react";
 import { useImages } from "../../hooks/useImages";
 
-import ImageGallery from "@/components/Photos/ImageGallery";
 import MediaGallery from "@/components/Media/MediaGallery";
+import { LoadingScreen } from "@/components/ui/LoadingScreen/LoadingScreen";
 
 const Photos: React.FC = () => {
   const localPath = localStorage.getItem("folderPath") || "";
   const { images, loading } = useImages(localPath);
   console.log(images);
   if (loading) {
-    return <div>Loading images...</div>;
+    return <LoadingScreen />;
   }
 
   return (

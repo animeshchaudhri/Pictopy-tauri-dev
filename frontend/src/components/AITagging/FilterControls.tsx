@@ -6,7 +6,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { LayoutGridIcon, ListOrderedIcon } from "../Icons/Icons";
+import { LayoutGridIcon, ListOrderedIcon } from "../ui/Navigation/Icons/Icons";
 import { Button } from "../ui/button";
 
 interface Image {

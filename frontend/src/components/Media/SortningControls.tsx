@@ -6,23 +6,9 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ListOrderedIcon } from "@/components/Icons/Icons";
+import { ListOrderedIcon } from "@/components/ui/Navigation/Icons/Icons";
 import { Button } from "@/components/ui/button";
-export interface MediaItem {
-  src: string;
-  date: string;
-  title?: string;
-}
-interface YearOption {
-  value: string;
-  label: string;
-}
-
-interface SortingControlsProps {
-  sortBy: string;
-  setSortBy: (value: string) => void;
-  mediaItems: MediaItem[];
-}
+import { SortingControlsProps, YearOption } from "@/types/Media";
 
 const SortingControls: React.FC<SortingControlsProps> = ({
   sortBy,

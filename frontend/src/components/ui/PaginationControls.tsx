@@ -1,4 +1,4 @@
-// File: components/Videos/PaginationControls.tsx
+import { PaginationControlsProps } from "@/types/Media";
 import {
   Pagination,
   PaginationContent,
@@ -6,9 +6,9 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "./Pagination";
 
-import { PaginationControlsProps } from "@/types/video";
+
 
 export default function PaginationControls({
   currentPage,

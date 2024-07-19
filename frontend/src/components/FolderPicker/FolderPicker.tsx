@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "../ui/button";
-import { FolderOpenIcon } from "../Icons/Icons";
+import { FolderOpenIcon } from "../ui/Navigation/Icons/Icons";
 import { open } from "@tauri-apps/plugin-dialog";
 
 interface FolderPickerProps {

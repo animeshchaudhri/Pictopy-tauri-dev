@@ -1,14 +1,6 @@
-// components/MediaGallery/MediaCard.tsx
+// components/MediaGallery/MediaCard.tsx]
 
-export interface MediaItem {
-  src: string;
-  date: string;
-  title?: string;
-}
-interface MediaCardProps {
-  item: MediaItem;
-  type: "image" | "video";
-}
+import { MediaCardProps } from "@/types/Media";
 
 export default function MediaCard({ item, type }: MediaCardProps) {
   return (

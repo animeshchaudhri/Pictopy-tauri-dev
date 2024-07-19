@@ -5,7 +5,7 @@ import {
   ImageIcon,
   SettingsIcon,
   VideoIcon,
-} from "@/components/ui/Navigation/Icons/Icons";
+} from "../Icons/Icons";
 import { Link, useLocation } from "react-router-dom";
 
 function Sidebar() {

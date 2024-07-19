@@ -1,3 +1,4 @@
+import { LoadingScreen } from "@/components/ui/LoadingScreen/LoadingScreen";
 import MediaGallery from "@/components/Media/MediaGallery";
 
 import { useVideos } from "@/hooks/UseVideos";
@@ -7,7 +8,7 @@ const Videos: React.FC = () => {
   const { videos, loading } = useVideos(localPath);
 
   if (loading) {
-    return <div>Loading images...</div>;
+    return <LoadingScreen />;
   }
 
   return (

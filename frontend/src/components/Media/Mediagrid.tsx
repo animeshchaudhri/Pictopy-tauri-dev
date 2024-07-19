@@ -1,17 +1,7 @@
 // components/MediaGallery/MediaGrid.tsx
 
+import { MediaGridProps } from "@/types/Media";
 import MediaCard from "./MediaCard";
-export interface MediaItem {
-  src: string;
-  date: string;
-  title?: string;
-}
-interface MediaGridProps {
-  mediaItems: MediaItem[];
-  itemsPerRow: number;
-  openMediaViewer: (index: number) => void;
-  type: "image" | "video";
-}
 
 export default function MediaGrid({
   mediaItems,

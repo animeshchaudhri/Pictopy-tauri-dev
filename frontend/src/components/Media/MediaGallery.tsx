@@ -1,19 +1,10 @@
-import React, { useMemo, useState, useCallback, useEffect } from "react";
+import { useMemo, useState, useCallback } from "react";
 import MediaGrid from "./Mediagrid";
-import PaginationControls from "../Photos/PhotoGallery/PaginationControls";
+import PaginationControls from "../ui/PaginationControls";
 import MediaView from "./MediaView";
 import SortingControls from "./SortningControls";
 import { sortMedia } from "@/utils/imageUtils";
-export interface MediaItem {
-  src: string;
-  date: string;
-  title?: string;
-}
-export interface MediaGalleryProps {
-  mediaItems: MediaItem[];
-  title?: string;
-  type: "image" | "video";
-}
+import { MediaGalleryProps } from "@/types/Media";
 
 export default function MediaGallery({
   mediaItems,

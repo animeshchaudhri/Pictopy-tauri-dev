@@ -1,14 +1,6 @@
 // components/MediaGallery/MediaView.tsx
+import { MediaViewProps } from "@/types/Media";
 import React, { useEffect, useState } from "react";
-
-interface MediaViewProps {
-  initialIndex: number;
-  onClose: () => void;
-  allMedia: string[];
-  currentPage: number;
-  itemsPerPage: number;
-  type: "image" | "video";
-}
 
 const MediaView: React.FC<MediaViewProps> = ({
   initialIndex,
