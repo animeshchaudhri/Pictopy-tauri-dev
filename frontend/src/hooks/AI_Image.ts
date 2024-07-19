@@ -3,27 +3,17 @@ import { convertFileSrc } from "@tauri-apps/api/core";
 
 interface Image {
   id: string;
-  date: string;
   title: string;
   popularity: number;
   src: string;
   tags: string[];
 }
 
-const initialData = {
-  "E:/work/gsoc/New folder/PictoPy/images/001.jpg": "broccoli, bowl",
-  "/home/bassam/Documents/os/PictoPy/images/000000000025.jpg": "giraffe",
-  "/home/bassam/Documents/os/PictoPy/images/000000000030.jpg":
-    "vase, potted plant",
-  "/home/bassam/Documents/os/PictoPy/images/000000000034.jpg": "zebra",
-  "/home/bassam/Documents/os/PictoPy/images/001.jpg": "person",
-  "/home/bassam/Documents/os/PictoPy/images/001.png": "person, car",
-  "/home/bassam/Documents/os/PictoPy/images/002.jpg": "person, tie",
-  "/home/bassam/Documents/os/PictoPy/images/004.png":
-    "bowl, cup, dining table, bottle, fork, spoon, knife, wine glass",
-  "/home/bassam/Documents/os/PictoPy/images/cat.png": "cat",
-  "/home/bassam/Documents/os/PictoPy/images/zidane.jpg": "person, tie",
-};
+interface APIResponse {
+  data: {
+    [key: string]: string[];
+  };
+}
 
 const useAIImage = (folderPath: string) => {
   const [images, setImages] = useState<Image[]>([]);
@@ -32,10 +22,17 @@ const useAIImage = (folderPath: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-      
-        const allImageObjects = initialData;
+        const response = await fetch(
+          "http://127.0.0.1:8000/images/all-image-objects"
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const allImageObjects: APIResponse = await response.json();
 
-        const parsedAndSortedImages = parseAndSortImageData(allImageObjects);
+        const parsedAndSortedImages = parseAndSortImageData(
+          allImageObjects.data
+        );
         setImages(parsedAndSortedImages);
       } catch (error) {
         console.error("Error fetching images:", error);
@@ -47,17 +44,16 @@ const useAIImage = (folderPath: string) => {
     fetchData();
   }, [folderPath]);
 
-  const parseAndSortImageData = (data: any): Image[] => {
+  const parseAndSortImageData = (data: APIResponse["data"]): Image[] => {
     const parsedImages: Image[] = Object.entries(data).map(
       ([src, tags], index) => {
         const srcc = convertFileSrc(src);
         return {
-          id: String(index),
-          date: new Date().toISOString(),
-          title: src.substring(src.lastIndexOf("/") + 1),
-          popularity: tags.split(", ").length,
+          id: index.toString(),
+          title: src.substring(src.lastIndexOf("\\") + 1),
+          popularity: tags.length,
           src: srcc,
-          tags: tags.split(", "),
+          tags: tags,
         };
       }
     );

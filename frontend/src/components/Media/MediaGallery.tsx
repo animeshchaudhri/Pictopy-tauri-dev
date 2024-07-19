@@ -1,0 +1,89 @@
+import React, { useMemo, useState, useCallback, useEffect } from "react";
+import MediaGrid from "./Mediagrid";
+import PaginationControls from "../Photos/PhotoGallery/PaginationControls";
+import MediaView from "./MediaView";
+import SortingControls from "./SortningControls";
+import { sortMedia } from "@/utils/imageUtils";
+export interface MediaItem {
+  src: string;
+  date: string;
+  title?: string;
+}
+export interface MediaGalleryProps {
+  mediaItems: MediaItem[];
+  title?: string;
+  type: "image" | "video";
+}
+
+export default function MediaGallery({
+  mediaItems,
+  title,
+  type,
+}: MediaGalleryProps) {
+  const currentYear = new Date().getFullYear().toString();
+  const [sortBy, setSortBy] = useState<string>("date");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [showMediaViewer, setShowMediaViewer] = useState<boolean>(false);
+  const [selectedMediaIndex, setSelectedMediaIndex] = useState<number>(0);
+  const itemsPerPage: number = 9;
+  const itemsPerRow: number = 3;
+
+  const sortedMedia = useMemo(() => {
+    return sortMedia(mediaItems, sortBy);
+  }, [mediaItems, sortBy]);
+
+  const currentItems = useMemo(() => {
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    return sortedMedia.slice(indexOfFirstItem, indexOfLastItem);
+  }, [sortedMedia, currentPage, itemsPerPage]);
+
+  const totalPages = Math.ceil(sortedMedia.length / itemsPerPage);
+
+  const handleSetSortBy = useCallback((value: string) => {
+    setSortBy(value);
+  }, []);
+
+  const openMediaViewer = useCallback((index: number) => {
+    setSelectedMediaIndex(index);
+    setShowMediaViewer(true);
+  }, []);
+
+  const closeMediaViewer = useCallback(() => {
+    setShowMediaViewer(false);
+  }, []);
+
+  return (
+    <div className="dark:bg-background dark:text-foreground max-w-6xl mx-auto px-4 md:px-6 py-8">
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-bold">{title || currentYear}</h1>
+        <SortingControls
+          sortBy={sortBy}
+          setSortBy={handleSetSortBy}
+          mediaItems={mediaItems}
+        />
+      </div>
+      <MediaGrid
+        mediaItems={currentItems}
+        itemsPerRow={itemsPerRow}
+        openMediaViewer={openMediaViewer}
+        type={type}
+      />
+      <PaginationControls
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
+      {showMediaViewer && (
+        <MediaView
+          initialIndex={selectedMediaIndex}
+          onClose={closeMediaViewer}
+          allMedia={sortedMedia.map((item) => item.src)}
+          currentPage={currentPage}
+          itemsPerPage={itemsPerPage}
+          type={type}
+        />
+      )}
+    </div>
+  );
+}

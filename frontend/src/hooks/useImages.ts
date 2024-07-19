@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 interface ImageData {
   src: string;
   original: string;
-  caption: string;
+
   title: string;
   date: string;
-  popularity: number;
+
   tags: string[];
 }
 
@@ -37,6 +37,7 @@ export const useImages = (folderPath: string) => {
         );
 
         // Ensure response is in the expected format
+
         if (!response || typeof response !== "object") {
           console.error("Invalid response format:", response);
           setLoading(false);
@@ -65,20 +66,18 @@ export const useImages = (folderPath: string) => {
 
             const imagePaths = response[year][month];
 
-            // Map image paths to imageUrls array
             const mappedImages = await Promise.all(
               imagePaths.map(async (imagePath: string) => {
                 const src = await convertFileSrc(imagePath);
 
-                // Extracting the date from the image path
-                const filename = imagePath.split("\\").pop(); // Get the filename from the full path
+                const filename = imagePath.split("\\").pop();
                 const matches = filename
                   ? filename.match(/\d{4}-\d{2}-\d{2}/)
-                  : null; // Add null check for filename
+                  : null;
 
                 let date = null;
                 if (matches) {
-                  date = new Date(matches[0]).toISOString(); // Convert matched date string to ISO string
+                  date = new Date(matches[0]).toISOString();
                 } else {
                   date = new Date().toISOString(); // Default to today's date if no valid date found in filename
                 }
@@ -86,16 +85,15 @@ export const useImages = (folderPath: string) => {
                 return {
                   src,
                   original: src,
-                  caption: `Image ${imagePath}`,
-                  title: `Video ${imagePath}`,
+
+                  title: `Image ${imagePath}`,
                   date,
-                  popularity: 0,
+
                   tags: [],
                 };
               })
             );
 
-            // Push mapped images to imageUrls array
             imageUrls.push(...mappedImages);
           }
         }

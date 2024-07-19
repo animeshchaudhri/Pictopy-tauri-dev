@@ -1,22 +1,21 @@
-// File: components/Images/ImageGallery.tsx
-
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { sortImages } from "@/utils/imageUtils";
 import SortingControls from "./PhotoGallery/SortingControls";
 import ImageGrid from "./PhotoGallery/ImageGrid";
 import ImageView from "./PhotoGallery/PhotosView";
 import PaginationControls from "../Videos/VideoGallery/Pagination";
 import { ImageGalleryProps } from "@/types/image";
+import NotFoundPage from "../404/404";
 
 export default function ImageGallery({ images, title }: ImageGalleryProps) {
   const currentYear = new Date().getFullYear().toString();
 
-  const [sortBy, setSortBy] = useState<"date" | string>("date"); // Default sorting by 'date'
-  const [imagesPerRow, setImagesPerRow] = useState<number>(3);
+  const [sortBy, setSortBy] = useState<string>("date");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [showImageViewer, setShowImageViewer] = useState<boolean>(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
   const imagesPerPage: number = 9;
+  const imagesPerRow: number = 3;
 
   const sortedImages = useMemo(
     () => sortImages(images, sortBy),
@@ -47,6 +46,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
           images={images}
         />
       </div>
+      {(!images || images.length === 0) && <NotFoundPage message="Images" />}
       <ImageGrid
         images={currentImages}
         imagesPerRow={imagesPerRow}
@@ -59,9 +59,11 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
       />
       {showImageViewer && (
         <ImageView
-          images={images.map((img) => img.src)}
           initialIndex={selectedImageIndex}
           onClose={closeImageViewer}
+          allImages={sortedImages.map((img) => img.src)}
+          currentPage={currentPage}
+          imagesPerPage={imagesPerPage}
         />
       )}
     </div>

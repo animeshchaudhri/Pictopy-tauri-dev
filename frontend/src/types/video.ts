@@ -1,8 +1,6 @@
 export interface Video {
-  id: string;
   date: string;
   title: string;
-  popularity: number;
   src: string;
 }
 
@@ -23,14 +21,7 @@ export interface PaginationControlsProps {
   onPageChange: (page: number) => void;
 }
 export interface SortingControlsProps {
-  sortBy: "date" | "title" | "popularity";
-  setSortBy: (value: "date" | "title" | "popularity") => void;
-  videosPerRow: number;
-  setVideosPerRow: (value: number) => void;
-}
-export interface SortingControlsProps {
-  sortBy: "date" | "title" | "popularity";
-  setSortBy: (value: "date" | "title" | "popularity") => void;
-  videosPerRow: number;
-  setVideosPerRow: (value: number) => void;
+  sortBy: string;
+  setSortBy: (value: string) => void;
+  videos: Video[];
 }

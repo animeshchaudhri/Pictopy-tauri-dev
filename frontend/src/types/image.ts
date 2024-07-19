@@ -1,14 +1,12 @@
 export interface Image {
-  id: string;
   date: string;
   title: string;
-  popularity: number;
   src: string;
 }
 
 export interface ImageGalleryProps {
   images: Image[];
-  title: string | null;
+  title: string;
 }
 export interface ImageData {
   src: string;
@@ -27,8 +25,7 @@ export interface ResponseData {
 export type SortingType = "date";
 
 export interface SortingControlsProps {
-  sortBy: "date"; // Currently only supports sorting by date
-  setSortBy: (sortBy: "date") => void; // Function to set the sorting type
-  imagesPerRow: number;
-  setImagesPerRow: (imagesPerRow: number) => void;
+  sortBy: string;
+  setSortBy: (value: string) => void;
+  images: Image[];
 }

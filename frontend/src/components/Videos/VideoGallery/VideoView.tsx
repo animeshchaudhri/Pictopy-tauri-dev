@@ -1,27 +1,42 @@
 import React, { useEffect, useState } from "react";
 
-const VideoView: React.FC<{
-  videos: string[];
+interface VideoViewProps {
   initialIndex: number;
   onClose: () => void;
-}> = ({ videos, initialIndex, onClose }) => {
-  const [currentvideoIndex, setCurrentvideoIndex] =
-    useState<number>(initialIndex);
+  allVideos: string[];
+  currentPage: number;
+  videosPerPage: number;
+}
+
+const VideoView: React.FC<VideoViewProps> = ({
+  initialIndex,
+  onClose,
+  allVideos,
+  currentPage,
+  videosPerPage,
+}) => {
+  const [globalIndex, setGlobalIndex] = useState<number>(
+    (currentPage - 1) * videosPerPage + initialIndex
+  );
 
   useEffect(() => {
-    setCurrentvideoIndex(initialIndex);
-  }, [initialIndex]);
+    setGlobalIndex((currentPage - 1) * videosPerPage + initialIndex);
+  }, [initialIndex, currentPage, videosPerPage]);
 
-  function handlePrevvideo() {
-    setCurrentvideoIndex((prevIndex) =>
-      prevIndex === 0 ? videos.length - 1 : prevIndex - 1
-    );
+  function handlePrevVideo() {
+    if (globalIndex > 0) {
+      setGlobalIndex(globalIndex - 1);
+    } else {
+      setGlobalIndex(allVideos.length - 1);
+    }
   }
 
-  function handleNextvideo() {
-    setCurrentvideoIndex((prevIndex) =>
-      prevIndex === videos.length - 1 ? 0 : prevIndex + 1
-    );
+  function handleNextVideo() {
+    if (globalIndex < allVideos.length - 1) {
+      setGlobalIndex(globalIndex + 1);
+    } else {
+      setGlobalIndex(0);
+    }
   }
 
   return (
@@ -32,15 +47,20 @@ const VideoView: React.FC<{
       >
         Back
       </button>
-      <video src={videos[currentvideoIndex]} className="max-h-full" controls />
+      <video
+        src={allVideos[globalIndex]}
+        className="max-h-full"
+        controls
+        autoPlay
+      />
       <button
-        onClick={handlePrevvideo}
+        onClick={handlePrevVideo}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 p-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-20"
       >
         {"<"}
       </button>
       <button
-        onClick={handleNextvideo}
+        onClick={handleNextVideo}
         className="absolute top-1/2 right-4 transform -translate-y-1/2 p-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
       >
         {">"}

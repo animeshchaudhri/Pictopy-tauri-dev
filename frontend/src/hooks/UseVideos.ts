@@ -3,33 +3,97 @@
 import { convertFileSrc, invoke } from "@tauri-apps/api/core";
 import { useState, useEffect } from "react";
 
-export const usevideos = (folderPath: string) => {
-  const [videos, setvideos] = useState<any[]>([]);
+interface VideoData {
+  src: string;
+  original: string;
+  title: string;
+  date: string;
+  tags: string[];
+}
+
+interface ResponseData {
+  [year: string]: {
+    [month: string]: string[];
+  };
+}
+
+export const useVideos = (folderPath: string) => {
+  const [videos, setVideos] = useState<VideoData[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchvideos = async () => {
+    const fetchVideos = async () => {
       try {
         console.log("Fetching videos from folder:", folderPath);
-        const videos: string[] = await invoke("get_all_videos_with_cache", {
-          directory: folderPath,
-        });
 
-        const videosPath = await Promise.all(
-            videos.map(async (videosPath) => {
-            const src = await convertFileSrc(videosPath);
-            return {
-              src,
-              original: src,
-              caption: `Image ${videosPath}`,
-              title: `Video ${videosPath}`,
-              date: new Date().toISOString(),
-              popularity: 0,
-            };
-          })
+        // Fetch video paths using invoke
+        const response: ResponseData = await invoke(
+          "get_all_videos_with_cache",
+          {
+            directory: folderPath,
+          }
         );
+        console.log(response);
+        // Ensure response is in the expected format
+        if (!response || typeof response !== "object") {
+          console.error("Invalid response format:", response);
+          setLoading(false);
+          return;
+        }
 
-        setvideos(videosPath);
+        const videoUrls: VideoData[] = [];
+
+        // Iterate through each year in the response
+        for (const year in response) {
+          if (
+            !response.hasOwnProperty(year) ||
+            typeof response[year] !== "object"
+          ) {
+            continue;
+          }
+
+          // Iterate through each month in the current year
+          for (const month in response[year]) {
+            if (
+              !response[year].hasOwnProperty(month) ||
+              !Array.isArray(response[year][month])
+            ) {
+              continue;
+            }
+
+            const videoPaths = response[year][month];
+
+            const mappedVideos = await Promise.all(
+              videoPaths.map(async (videoPath: string) => {
+                const src = await convertFileSrc(videoPath);
+
+                const filename = videoPath.split("\\").pop();
+                const matches = filename
+                  ? filename.match(/\d{4}-\d{2}-\d{2}/)
+                  : null;
+
+                let date = null;
+                if (matches) {
+                  date = new Date(matches[0]).toISOString();
+                } else {
+                  date = new Date().toISOString(); // Default to today's date if no valid date found in filename
+                }
+
+                return {
+                  src,
+                  original: src,
+                  title: `Video ${videoPath}`,
+                  date,
+                  tags: [],
+                };
+              })
+            );
+
+            videoUrls.push(...mappedVideos);
+          }
+        }
+
+        setVideos(videoUrls);
       } catch (error) {
         console.error("Error fetching videos:", error);
       } finally {
@@ -37,7 +101,7 @@ export const usevideos = (folderPath: string) => {
       }
     };
 
-    fetchvideos();
+    fetchVideos();
   }, [folderPath]);
 
   return { videos, loading };

@@ -8,24 +8,33 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ListOrderedIcon } from "@/components/Icons/Icons";
 import { Button } from "@/components/ui/button";
-
-import { SortingControlsProps } from "@/types/video";
+export interface MediaItem {
+  src: string;
+  date: string;
+  title?: string;
+}
 interface YearOption {
   value: string;
   label: string;
 }
 
+interface SortingControlsProps {
+  sortBy: string;
+  setSortBy: (value: string) => void;
+  mediaItems: MediaItem[];
+}
+
 const SortingControls: React.FC<SortingControlsProps> = ({
   sortBy,
   setSortBy,
-  videos,
+  mediaItems,
 }) => {
   const handleSortChange = (value: string) => {
     setSortBy(value);
   };
 
   // Extract years from image data
-  const years = videos.reduce<string[]>((acc, curr) => {
+  const years = mediaItems.reduce<string[]>((acc, curr) => {
     const year = new Date(curr.date).getFullYear().toString();
     if (!acc.includes(year)) {
       acc.push(year);
@@ -41,7 +50,6 @@ const SortingControls: React.FC<SortingControlsProps> = ({
     value: `year-${year}`,
     label: year,
   }));
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

@@ -3,19 +3,20 @@
 import { useState, useMemo } from "react";
 import { sortVideos } from "@/utils/videoUtils";
 import SortingControls from "./VideoGallery/SortingControls";
-import PaginationControls from "./VideoGallery/Pagination";
-import VideoView from "./VideoGallery/VideoView";
 import VideoGrid from "./VideoGallery/VideoGrid";
+import VideoView from "./VideoGallery/VideoView";
+import PaginationControls from "./VideoGallery/Pagination";
 import { VideoGalleryProps } from "@/types/video";
 
-
 export default function VideoGallery({ videos, title }: VideoGalleryProps) {
-  const [sortBy, setSortBy] = useState<"date" | "title" | "popularity">("date");
-  const [videosPerRow, setVideosPerRow] = useState<number>(3);
+  const currentYear = new Date().getFullYear().toString();
+
+  const [sortBy, setSortBy] = useState<string>("date");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [showVideoViewer, setShowVideoViewer] = useState<boolean>(false);
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number>(0);
   const videosPerPage: number = 9;
+  const videosPerRow: number = 3;
 
   const sortedVideos = useMemo(
     () => sortVideos(videos, sortBy),
@@ -39,17 +40,16 @@ export default function VideoGallery({ videos, title }: VideoGalleryProps) {
   return (
     <div className="dark:bg-background dark:text-foreground max-w-6xl mx-auto px-4 md:px-6 py-8">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">{title}</h1>
+        <h1 className="text-2xl font-bold">{title || currentYear}</h1>
         <SortingControls
           sortBy={sortBy}
           setSortBy={setSortBy}
-          videosPerRow={videosPerRow}
-          setVideosPerRow={setVideosPerRow}
+          videos={videos}
         />
       </div>
       <VideoGrid
         videos={currentVideos}
-        videosPerRow={videosPerRow ? videosPerRow : 0}
+        videosPerRow={videosPerRow}
         openVideoViewer={openVideoViewer}
       />
       <PaginationControls
@@ -59,9 +59,11 @@ export default function VideoGallery({ videos, title }: VideoGalleryProps) {
       />
       {showVideoViewer && (
         <VideoView
-          videos={videos.map((vid) => vid.src)}
           initialIndex={selectedVideoIndex}
           onClose={closeVideoViewer}
+          allVideos={sortedVideos.map((vid) => vid.src)}
+          currentPage={currentPage}
+          videosPerPage={videosPerPage}
         />
       )}
     </div>

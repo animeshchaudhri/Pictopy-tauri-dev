@@ -1,38 +1,41 @@
+// components/MediaGallery/MediaView.tsx
 import React, { useEffect, useState } from "react";
 
-interface ImageViewProps {
+interface MediaViewProps {
   initialIndex: number;
   onClose: () => void;
-  allImages: string[];
+  allMedia: string[];
   currentPage: number;
-  imagesPerPage: number;
+  itemsPerPage: number;
+  type: "image" | "video";
 }
 
-const ImageView: React.FC<ImageViewProps> = ({
+const MediaView: React.FC<MediaViewProps> = ({
   initialIndex,
   onClose,
-  allImages,
+  allMedia,
   currentPage,
-  imagesPerPage,
+  itemsPerPage,
+  type,
 }) => {
   const [globalIndex, setGlobalIndex] = useState<number>(
-    (currentPage - 1) * imagesPerPage + initialIndex
+    (currentPage - 1) * itemsPerPage + initialIndex
   );
 
   useEffect(() => {
-    setGlobalIndex((currentPage - 1) * imagesPerPage + initialIndex);
-  }, [initialIndex, currentPage, imagesPerPage]);
+    setGlobalIndex((currentPage - 1) * itemsPerPage + initialIndex);
+  }, [initialIndex, currentPage, itemsPerPage]);
 
-  function handlePrevImage() {
+  function handlePrevItem() {
     if (globalIndex > 0) {
       setGlobalIndex(globalIndex - 1);
     } else {
-      setGlobalIndex(allImages.length - 1);
+      setGlobalIndex(allMedia.length - 1);
     }
   }
 
-  function handleNextImage() {
-    if (globalIndex < allImages.length - 1) {
+  function handleNextItem() {
+    if (globalIndex < allMedia.length - 1) {
       setGlobalIndex(globalIndex + 1);
     } else {
       setGlobalIndex(0);
@@ -47,19 +50,28 @@ const ImageView: React.FC<ImageViewProps> = ({
       >
         Back
       </button>
-      <img
-        src={allImages[globalIndex]}
-        alt={`image-${globalIndex}`}
-        className="max-h-full"
-      />
+      {type === "image" ? (
+        <img
+          src={allMedia[globalIndex]}
+          alt={`image-${globalIndex}`}
+          className="max-h-full"
+        />
+      ) : (
+        <video
+          src={allMedia[globalIndex]}
+          className="max-h-full"
+          controls
+          autoPlay
+        />
+      )}
       <button
-        onClick={handlePrevImage}
+        onClick={handlePrevItem}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 p-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-20"
       >
         {"<"}
       </button>
       <button
-        onClick={handleNextImage}
+        onClick={handleNextItem}
         className="absolute top-1/2 right-4 transform -translate-y-1/2 p-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
       >
         {">"}
@@ -68,4 +80,4 @@ const ImageView: React.FC<ImageViewProps> = ({
   );
 };
 
-export default ImageView;
+export default MediaView;

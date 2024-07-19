@@ -3,8 +3,7 @@ import AIGallery from "@/components/Photos/AIgallery";
 import useAIImage from "@/hooks/AI_Image";
 
 const AITagging: React.FC = () => {
-  const localPath = localStorage.getItem("folderPath") || "";
-  const { images, loading } = useAIImage(localPath);
+  const { images, loading } = useAIImage("tagged-images");
 
   if (loading) {
     return <div>Loading images...</div>;
@@ -12,7 +11,7 @@ const AITagging: React.FC = () => {
 
   return (
     <div>
-      <AIGallery images={images} title={localPath} />
+      <AIGallery images={images} title={"Tagged Images"} />
     </div>
   );
 };
