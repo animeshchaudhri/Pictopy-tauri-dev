@@ -9,8 +9,8 @@ export function sortMedia(
   console.log(`Sorting ${mediaItems.length} items by: ${sortBy}`);
 
   return [...mediaItems].sort((a, b) => {
-    const aDate = new Date(a.date);
-    const bDate = new Date(b.date);
+    const aDate = a.date ? new Date(a.date) : new Date();
+    const bDate = b.date ? new Date(b.date) : new Date();
 
     if (sortBy === "date") {
       // Sort by date in descending order

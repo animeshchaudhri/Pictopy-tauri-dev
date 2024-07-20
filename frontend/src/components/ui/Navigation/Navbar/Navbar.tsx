@@ -1,4 +1,4 @@
-import { MountainIcon } from "@/components/Icons/Icons";
+import { MountainIcon } from "../Icons/Icons";
 
 export function Navbar(props: { title?: string }) {
   return (

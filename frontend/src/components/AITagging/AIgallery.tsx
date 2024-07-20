@@ -1,70 +1,77 @@
-import { useState, useMemo } from "react";
-import ImageGrid from "./PhotoGallery/ImageGrid";
-import PaginationControls from "./PhotoGallery/PaginationControls";
-import ImageView from "./PhotoGallery/PhotosView";
+import { useCallback, useMemo, useState } from "react";
 import FilterControls from "./FilterControls";
-import { ImageGalleryProps } from "@/types/image";
-import { Button } from "../ui/button";
+import MediaGrid from "../Media/Mediagrid";
+import PaginationControls from "../ui/PaginationControls";
+import { MediaGalleryProps } from "@/types/Media";
+import MediaView from "../Media/MediaView";
 
-export default function AIGallery({ images, title }: ImageGalleryProps) {
+export default function AIGallery({
+  mediaItems,
+  title,
+  type,
+}: MediaGalleryProps) {
   const [filterTag, setFilterTag] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [showImageViewer, setShowImageViewer] = useState<boolean>(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
-  const imagesPerPage: number = 9;
-  const imagesPerRow: number = 3;
+  const [showMediaViewer, setShowMediaViewer] = useState<boolean>(false);
+  const [selectedMediaIndex, setSelectedMediaIndex] = useState<number>(0);
+  const itemsPerPage: number = 9;
+  const itemsPerRow: number = 3;
 
-  const filteredImages = useMemo(() => {
+  const filteredmediaItems = useMemo(() => {
     return filterTag
-      ? images.filter((image) => image.tags.includes(filterTag))
-      : images;
-  }, [filterTag, images]);
+      ? mediaItems.filter((mediaItems: any) =>
+          mediaItems.tags.includes(filterTag)
+        )
+      : mediaItems;
+  }, [filterTag, mediaItems]);
 
-  const indexOfLastImage = currentPage * imagesPerPage;
-  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = filteredImages.slice(
-    indexOfFirstImage,
-    indexOfLastImage
-  );
-  const totalPages = Math.ceil(filteredImages.length / imagesPerPage);
+  const currentItems = useMemo(() => {
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    return filteredmediaItems.slice(indexOfFirstItem, indexOfLastItem);
+  }, [filteredmediaItems, currentPage, itemsPerPage]);
 
-  const openImageViewer = (index: number) => {
-    setSelectedImageIndex(index);
-    setShowImageViewer(true);
-  };
+  const totalPages = Math.ceil(filteredmediaItems.length / itemsPerPage);
 
-  const closeImageViewer = () => {
-    setShowImageViewer(false);
-  };
+  const openMediaViewer = useCallback((index: number) => {
+    setSelectedMediaIndex(index);
+    setShowMediaViewer(true);
+  }, []);
+
+  const closeMediaViewer = useCallback(() => {
+    setShowMediaViewer(false);
+  }, []);
 
   return (
     <div className="dark:bg-background dark:text-foreground max-w-6xl mx-auto px-4 md:px-6 py-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">{title}</h1>
-        
+
         <FilterControls
           filterTag={filterTag}
           setFilterTag={setFilterTag}
-          images={images}
+          mediaItems={mediaItems}
         />
       </div>
-      <ImageGrid
-        images={currentImages}
-        imagesPerRow={imagesPerRow}
-        openImageViewer={openImageViewer}
+      <MediaGrid
+        mediaItems={currentItems}
+        itemsPerRow={itemsPerRow}
+        openMediaViewer={openMediaViewer}
+        type={type}
       />
       <PaginationControls
         currentPage={currentPage}
         totalPages={totalPages}
         onPageChange={setCurrentPage}
       />
-      {showImageViewer && (
-        <ImageView
-          initialIndex={selectedImageIndex}
-          onClose={closeImageViewer}
-          allImages={images.map((img: any) => img.src)}
+      {showMediaViewer && (
+        <MediaView
+          initialIndex={selectedMediaIndex}
+          onClose={closeMediaViewer}
+          allMedia={filteredmediaItems.map((item) => item.src)}
           currentPage={currentPage}
-          imagesPerPage={imagesPerPage}
+          itemsPerPage={itemsPerPage}
+          type={type}
         />
       )}
     </div>

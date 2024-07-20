@@ -3,16 +3,19 @@ import { lineWobble } from "ldrs";
 
 lineWobble.register();
 
-// Default values shown
-
 export const LoadingScreen: React.FC = () => (
-  <div>
+  <div className="fixed inset-0 flex flex-col justify-center items-center bg-gray-900 bg-opacity-75 z-50">
     <l-line-wobble
       size="80"
       stroke="5"
       bg-opacity="0.1"
       speed="1.75"
-      color="black"
+      color="white"
     ></l-line-wobble>
+    <p className="mt-4 text-white text-lg font-semibold animate-pulse">
+      Loading...
+    </p>
   </div>
 );
+
+export default LoadingScreen;

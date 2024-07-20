@@ -7,7 +7,7 @@ import { LoadingScreen } from "@/components/ui/LoadingScreen/LoadingScreen";
 const Photos: React.FC = () => {
   const localPath = localStorage.getItem("folderPath") || "";
   const { images, loading } = useImages(localPath);
-  console.log(images);
+
   if (loading) {
     return <LoadingScreen />;
   }

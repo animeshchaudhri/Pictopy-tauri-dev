@@ -1,7 +1,8 @@
 export interface MediaItem {
   src: string;
-  date: string;
+  date?: string;
   title?: string;
+  tags?: string[];
 }
 export interface MediaCardProps {
   item: MediaItem;

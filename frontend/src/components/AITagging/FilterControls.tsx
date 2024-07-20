@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,30 +6,27 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { LayoutGridIcon, ListOrderedIcon } from "../ui/Navigation/Icons/Icons";
+import { ListOrderedIcon } from "../ui/Navigation/Icons/Icons";
 import { Button } from "../ui/button";
-
-interface Image {
-  tags: string[];
-}
+import { MediaItem } from "@/types/Media";
 
 interface FilterControlsProps {
   filterTag: string;
   setFilterTag: (tag: string) => void;
-
-  images: Image[];
+  mediaItems: MediaItem[];
 }
 
 export default function FilterControls({
   filterTag,
   setFilterTag,
-
-  images,
+  mediaItems,
 }: FilterControlsProps) {
   const uniqueTags = useMemo(() => {
-    const allTags = images.flatMap((image) => image.tags);
-    return Array.from(new Set(allTags)).sort();
-  }, [images]);
+    const allTags = mediaItems.flatMap((item) => item.tags);
+    return Array.from(new Set(allTags))
+      .filter((tag): tag is string => typeof tag === "string")
+      .sort();
+  }, [mediaItems]);
 
   return (
     <div className="flex items-center gap-4 overflow-auto">
@@ -47,7 +44,7 @@ export default function FilterControls({
         >
           <DropdownMenuRadioGroup
             value={filterTag}
-            onValueChange={(value: string) => setFilterTag(value)}
+            onValueChange={setFilterTag}
           >
             <DropdownMenuRadioItem value="">All tags</DropdownMenuRadioItem>
             {uniqueTags.map((tag) => (

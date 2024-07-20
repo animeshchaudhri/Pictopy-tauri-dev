@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { convertFileSrc } from "@tauri-apps/api/core";
 
 interface Image {
-  id: string;
   title: string;
-  popularity: number;
   src: string;
   tags: string[];
 }
@@ -45,20 +43,15 @@ const useAIImage = (folderPath: string) => {
   }, [folderPath]);
 
   const parseAndSortImageData = (data: APIResponse["data"]): Image[] => {
-    const parsedImages: Image[] = Object.entries(data).map(
-      ([src, tags], index) => {
-        const srcc = convertFileSrc(src);
-        return {
-          id: index.toString(),
-          title: src.substring(src.lastIndexOf("\\") + 1),
-          popularity: tags.length,
-          src: srcc,
-          tags: tags,
-        };
-      }
-    );
+    const parsedImages: Image[] = Object.entries(data).map(([src, tags]) => {
+      const srcc = convertFileSrc(src);
+      return {
+        title: src.substring(src.lastIndexOf("\\") + 1),
 
-    parsedImages.sort((a, b) => b.popularity - a.popularity);
+        src: srcc,
+        tags: tags,
+      };
+    });
 
     return parsedImages;
   };

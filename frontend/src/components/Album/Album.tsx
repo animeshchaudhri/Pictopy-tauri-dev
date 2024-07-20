@@ -1,71 +1,105 @@
-import { useState } from "react";
-import {
-  useAllAlbums,
-  useCreateAlbum,
-  useDeleteAlbum,
-} from "../../hooks/AlbumService";
+// AlbumsView.tsx
+import React, { useState } from "react";
+import { useAllAlbums } from "../../hooks/AlbumService";
+import AlbumList from "./AlbumList";
 
-const AlbumsView = () => {
-  const { albums, isLoading, error, refetch } = useAllAlbums();
-  const {
-    createAlbum,
-    isLoading: isCreating,
-    error: createError,
-  } = useCreateAlbum();
-  const {
-    deleteAlbum,
-    isLoading: isDeleting,
-    error: deleteError,
-  } = useDeleteAlbum();
-  const [newAlbumName, setNewAlbumName] = useState("");
+import ImageManagementDialog from "./ImageManagementDialog";
+
+import { Button } from "@/components/ui/button";
+import CreateAlbumForm from "./AlbumForm";
+import EditAlbumDialog from "./AlbumDialog";
+import ErrorDialog from "./Error";
+
+const AlbumsView: React.FC = () => {
+  const { albums, isLoading, refetch } = useAllAlbums();
+  const [showCreateForm, setShowCreateForm] = useState(false);
+  const [editingAlbum, setEditingAlbum] = useState<{
+    name: string;
+    description: string;
+  } | null>(null);
+  const [currentAlbum, setCurrentAlbum] = useState<string | null>(null);
+  const [errorDialogContent, setErrorDialogContent] = useState<{
+    title: string;
+    description: string;
+  } | null>(null);
 
   if (isLoading) return <div>Loading albums...</div>;
-  if (error) return <div>Error loading albums: {error.message}</div>;
 
-  const handleCreateAlbum = async () => {
-    if (newAlbumName) {
-      await createAlbum({ name: newAlbumName });
-      setNewAlbumName("");
-      refetch(); // Refresh the album list
-    }
+  const showErrorDialog = (title: string, err: unknown) => {
+    setErrorDialogContent({
+      title,
+      description:
+        err instanceof Error ? err.message : "An unknown error occurred",
+    });
   };
 
-  const handleDeleteAlbum = async (albumId: any) => {
-    await deleteAlbum(albumId);
-    refetch(); // Refresh the album list
-  };
+  const transformedAlbums = albums.map((album) => ({
+    id: album.album_name,
+    title: album.album_name,
+    coverImage: album.image_paths[0] || "/placeholder-image.jpg",
+    imageCount: album.image_paths.length,
+  }));
 
   return (
-    <div>
-      <h1>Albums</h1>
-      {Array.isArray(albums) ? (
-        albums.map((album) => (
-          <div key={album.album_name}>
-            {album.album_name}
-            <button
-              onClick={() => handleDeleteAlbum(album.album_name)}
-              disabled={isDeleting}
-            >
-              Delete
-            </button>
-          </div>
-        ))
-      ) : (
-        <div>Error: Albums data is not an array.</div>
-      )}
-      <div>
-        <input
-          type="text"
-          value={newAlbumName}
-          onChange={(e) => setNewAlbumName(e.target.value)}
-          placeholder="New album name"
-        />
-        <button onClick={handleCreateAlbum} disabled={isCreating}>
-          Create Album
-        </button>
+    <div className="container mx-auto p-4">
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold mb-4">Albums</h1>
+
+        {!showCreateForm ? (
+          <Button onClick={() => setShowCreateForm(true)} className="mb-4">
+            Create New Album
+          </Button>
+        ) : (
+          <CreateAlbumForm
+            onCancel={() => setShowCreateForm(false)}
+            onSuccess={() => {
+              setShowCreateForm(false);
+              refetch();
+            }}
+            onError={showErrorDialog}
+          />
+        )}
       </div>
-      {createError && <div>Error creating album: {createError.message}</div>}
-      {deleteError && <div>Error deleting album: {deleteError.message}</div>}
+      <AlbumList
+        albums={transformedAlbums}
+        albumsPerRow={3}
+        onAlbumClick={(albumId) => setCurrentAlbum(albumId)}
+        onEditAlbum={(albumId) => {
+          const album = albums.find((a) => a.album_name === albumId);
+          if (album) {
+            setEditingAlbum({
+              name: album.album_name,
+              description: album.description || "",
+            });
+          }
+        }}
+        onDeleteAlbum={(albumId) => {
+          // Implement delete functionality
+          refetch();
+        }}
+      />
+
+      <EditAlbumDialog
+        album={editingAlbum}
+        onClose={() => setEditingAlbum(null)}
+        onSuccess={() => {
+          setEditingAlbum(null);
+          refetch();
+        }}
+        onError={showErrorDialog}
+      />
+
+      <ImageManagementDialog
+        albumName={currentAlbum}
+        onClose={() => setCurrentAlbum(null)}
+        onSuccess={() => refetch()}
+        onError={showErrorDialog}
+      />
+
+      <ErrorDialog
+        content={errorDialogContent}
+        onClose={() => setErrorDialogContent(null)}
+      />
     </div>
   );
 };
