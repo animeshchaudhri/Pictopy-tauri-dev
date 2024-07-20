@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {
   useViewAlbum,
-  useAddImageToAlbum,
   useRemoveImageFromAlbum,
 } from "../../hooks/AlbumService";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Dialog,
   DialogContent,
@@ -13,6 +11,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+
+import { convertFileSrc } from "@tauri-apps/api/core";
+import ImageSelectionPage from "./ImageSelection";
 
 interface ImageManagementDialogProps {
   albumName: string | null;
@@ -31,41 +32,55 @@ const ImageManagementDialog: React.FC<ImageManagementDialogProps> = ({
     album: viewedAlbum,
     viewAlbum,
     isLoading: isViewingAlbum,
+    error: viewError,
   } = useViewAlbum();
-  const { addImage, isLoading: isAddingImage } = useAddImageToAlbum();
   const { removeImage, isLoading: isRemovingImage } = useRemoveImageFromAlbum();
-  const [newImageUrl, setNewImageUrl] = useState("");
+  const [showImageSelection, setShowImageSelection] = useState(false);
 
   useEffect(() => {
     if (albumName) {
-      viewAlbum(albumName);
+      viewAlbum(albumName).catch((err) => onError("Error loading album", err));
     }
-  }, [albumName, viewAlbum]);
-
-  const handleAddImage = async () => {
-    if (albumName && newImageUrl) {
-      try {
-        await addImage(albumName, newImageUrl);
-        setNewImageUrl("");
-        viewAlbum(albumName);
-        onSuccess();
-      } catch (err) {
-        onError("Error Adding Image", err);
-      }
-    }
-  };
+  }, [albumName, viewAlbum, onError]);
 
   const handleRemoveImage = async (imageUrl: string) => {
     if (albumName) {
       try {
         await removeImage(albumName, imageUrl);
-        viewAlbum(albumName);
+        await viewAlbum(albumName);
         onSuccess();
       } catch (err) {
         onError("Error Removing Image", err);
       }
     }
   };
+
+  const getImageName = (path: string) => {
+    return path.split("\\").pop() || path;
+  };
+
+  if (viewError) {
+    return <div>Error loading album: {viewError.message}</div>;
+  }
+
+  if (isViewingAlbum) {
+    return <div>Loading...</div>;
+  }
+
+  if (showImageSelection) {
+    return (
+      <ImageSelectionPage
+        albumName={albumName || ""}
+        onClose={() => setShowImageSelection(false)}
+        onSuccess={() => {
+          setShowImageSelection(false);
+          viewAlbum(albumName || "");
+          onSuccess();
+        }}
+        onError={onError}
+      />
+    );
+  }
 
   return (
     <Dialog open={!!albumName} onOpenChange={onClose}>
@@ -74,34 +89,33 @@ const ImageManagementDialog: React.FC<ImageManagementDialogProps> = ({
           <DialogTitle>Manage Images: {albumName}</DialogTitle>
         </DialogHeader>
         <div className="my-4">
-          <Input
-            type="text"
-            value={newImageUrl}
-            onChange={(e) => setNewImageUrl(e.target.value)}
-            placeholder="New image URL"
-            className="mb-2"
-          />
-          <Button onClick={handleAddImage} disabled={isAddingImage}>
-            Add Image
+          <Button onClick={() => setShowImageSelection(true)}>
+            Add Images to Album
           </Button>
         </div>
         <div className="grid grid-cols-3 gap-4">
-          {viewedAlbum?.image_paths.map((image, index) => (
-            <div key={index} className="relative">
-              <img
-                src={image}
-                alt={`Album image ${index}`}
-                className="w-full h-32 object-cover"
-              />
-              <Button
-                onClick={() => handleRemoveImage(image)}
-                disabled={isRemovingImage}
-                className="absolute top-0 right-0 bg-red-500 text-white p-1"
-              >
-                X
-              </Button>
-            </div>
-          ))}
+          {viewedAlbum?.image_paths?.map((image, index) => {
+            const srcc = convertFileSrc(image);
+            return (
+              <div key={index} className="relative">
+                <img
+                  src={srcc}
+                  alt={`Album image ${getImageName(image)}`}
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+                <Button
+                  onClick={() => handleRemoveImage(image)}
+                  disabled={isRemovingImage}
+                  className="absolute top-0 right-0 bg-red-500 text-white p-1 rounded-full"
+                >
+                  X
+                </Button>
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-1 truncate rounded-b-lg">
+                  {getImageName(image)}
+                </div>
+              </div>
+            );
+          })}
         </div>
         <DialogFooter>
           <Button onClick={onClose}>Close</Button>

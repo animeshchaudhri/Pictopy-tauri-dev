@@ -12,9 +12,9 @@ const Videos: React.FC = () => {
   }
 
   return (
-    <div>
+    <>
       <MediaGallery mediaItems={videos} title="Image Gallery" type="video" />
-    </div>
+    </>
   );
 };
 

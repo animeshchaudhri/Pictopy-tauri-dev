@@ -1,3 +1,5 @@
+// src\components\ui\404\404.tsx
+
 import React from "react";
 
 interface NotFoundProps {

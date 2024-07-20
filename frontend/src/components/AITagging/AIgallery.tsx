@@ -1,15 +1,17 @@
-import { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import FilterControls from "./FilterControls";
 import MediaGrid from "../Media/Mediagrid";
 import PaginationControls from "../ui/PaginationControls";
 import { MediaGalleryProps } from "@/types/Media";
 import MediaView from "../Media/MediaView";
+import useAIImage from "../../hooks/AI_Image";
 
 export default function AIGallery({
-  mediaItems,
   title,
   type,
-}: MediaGalleryProps) {
+  folderPath,
+}: MediaGalleryProps & { folderPath: string }) {
+  const { images: mediaItems, loading } = useAIImage(folderPath);
   const [filterTag, setFilterTag] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [showMediaViewer, setShowMediaViewer] = useState<boolean>(false);
@@ -17,10 +19,10 @@ export default function AIGallery({
   const itemsPerPage: number = 9;
   const itemsPerRow: number = 3;
 
-  const filteredmediaItems = useMemo(() => {
+  const filteredMediaItems = useMemo(() => {
     return filterTag
-      ? mediaItems.filter((mediaItems: any) =>
-          mediaItems.tags.includes(filterTag)
+      ? mediaItems.filter((mediaItem: any) =>
+          mediaItem.tags.includes(filterTag)
         )
       : mediaItems;
   }, [filterTag, mediaItems]);
@@ -28,10 +30,10 @@ export default function AIGallery({
   const currentItems = useMemo(() => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    return filteredmediaItems.slice(indexOfFirstItem, indexOfLastItem);
-  }, [filteredmediaItems, currentPage, itemsPerPage]);
+    return filteredMediaItems.slice(indexOfFirstItem, indexOfLastItem);
+  }, [filteredMediaItems, currentPage, itemsPerPage]);
 
-  const totalPages = Math.ceil(filteredmediaItems.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredMediaItems.length / itemsPerPage);
 
   const openMediaViewer = useCallback((index: number) => {
     setSelectedMediaIndex(index);
@@ -42,6 +44,8 @@ export default function AIGallery({
     setShowMediaViewer(false);
   }, []);
 
+  const handleFolderAdded = useCallback(async () => {}, []);
+
   return (
     <div className="dark:bg-background dark:text-foreground max-w-6xl mx-auto px-4 md:px-6 py-8">
       <div className="flex items-center justify-between mb-6">
@@ -51,6 +55,8 @@ export default function AIGallery({
           filterTag={filterTag}
           setFilterTag={setFilterTag}
           mediaItems={mediaItems}
+          onFolderAdded={handleFolderAdded}
+          isLoading={loading}
         />
       </div>
       <MediaGrid
@@ -68,7 +74,7 @@ export default function AIGallery({
         <MediaView
           initialIndex={selectedMediaIndex}
           onClose={closeMediaViewer}
-          allMedia={filteredmediaItems.map((item) => item.src)}
+          allMedia={filteredMediaItems.map((item) => item.src)}
           currentPage={currentPage}
           itemsPerPage={itemsPerPage}
           type={type}

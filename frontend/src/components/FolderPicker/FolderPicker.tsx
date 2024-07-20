@@ -32,7 +32,7 @@ const FolderPicker: React.FC<FolderPickerProps> = ({ setFolderPath }) => {
         className="text-black-50 dark:text-gray-50 border-gray-500 dark:border-gray-500 hover:bg-gray-700 dark:hover:bg-gray-700"
       >
         <FolderOpenIcon className="mr-2 h-5 w-5 text-black-50 dark:text-gray-50" />
-        Choose Folder
+        Add folder
       </Button>
     </div>
   );

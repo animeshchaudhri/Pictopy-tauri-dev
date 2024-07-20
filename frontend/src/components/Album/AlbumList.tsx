@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { MoreVertical } from "lucide-react";
+import { convertFileSrc } from "@tauri-apps/api/core";
 
 interface Album {
   id: string;
@@ -70,8 +71,8 @@ const AlbumCard: React.FC<AlbumCardProps> = ({
     <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2 transition-transform duration-300 ease-in-out dark:bg-card dark:text-card-foreground">
       <div onClick={onClick} className="cursor-pointer">
         <img
-          src={album.coverImage}
-          alt={album.title}
+          src={convertFileSrc(album.coverImage)}
+          alt={`Cover for ${album.title}`}
           width={500}
           height={400}
           className="object-cover w-full h-64 transition-opacity duration-300"
@@ -79,7 +80,9 @@ const AlbumCard: React.FC<AlbumCardProps> = ({
         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
           <div className="text-white">
             <h3 className="text-lg font-semibold">{album.title}</h3>
-            <p className="text-sm">{album.imageCount} images</p>
+            <p className="text-sm">
+              {album.imageCount} image{album.imageCount !== 1 ? "s" : ""}
+            </p>
           </div>
         </div>
       </div>
@@ -93,7 +96,9 @@ const AlbumCard: React.FC<AlbumCardProps> = ({
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem onClick={onEdit}>Edit</DropdownMenuItem>
-            <DropdownMenuItem onClick={onDelete}>Delete</DropdownMenuItem>
+            <DropdownMenuItem onClick={onDelete} className="text-red-600">
+              Delete
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
@@ -102,15 +107,5 @@ const AlbumCard: React.FC<AlbumCardProps> = ({
 };
 
 export default AlbumList;
-export const CreateAlbumForm: React.FC<{ onSuccess: () => void }> = ({
-  onSuccess,
-}) => {
-  // Implement your form logic here
-  return (
-    <div>
-      <h2>Create Album Form</h2>
-      {/* Add your form fields here */}
-      <Button onClick={onSuccess}>Create Album</Button>
-    </div>
-  );
-};
+
+// Remove the duplicate CreateAlbumForm component at the end of the file

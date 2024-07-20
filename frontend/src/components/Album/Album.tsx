@@ -1,22 +1,23 @@
-// AlbumsView.tsx
 import React, { useState } from "react";
-import { useAllAlbums } from "../../hooks/AlbumService";
+import { useAllAlbums, useDeleteAlbum } from "../../hooks/AlbumService";
 import AlbumList from "./AlbumList";
-
-import ImageManagementDialog from "./ImageManagementDialog";
-
 import { Button } from "@/components/ui/button";
 import CreateAlbumForm from "./AlbumForm";
 import EditAlbumDialog from "./AlbumDialog";
 import ErrorDialog from "./Error";
+import AlbumView from "./Albumview";
+
+interface Album {
+  album_name: string;
+  image_paths: string[];
+  description?: string;
+}
 
 const AlbumsView: React.FC = () => {
   const { albums, isLoading, refetch } = useAllAlbums();
-  const [showCreateForm, setShowCreateForm] = useState(false);
-  const [editingAlbum, setEditingAlbum] = useState<{
-    name: string;
-    description: string;
-  } | null>(null);
+  const { deleteAlbum } = useDeleteAlbum();
+  const [isCreateFormOpen, setIsCreateFormOpen] = useState(false);
+  const [editingAlbum, setEditingAlbum] = useState<Album | null>(null);
   const [currentAlbum, setCurrentAlbum] = useState<string | null>(null);
   const [errorDialogContent, setErrorDialogContent] = useState<{
     title: string;
@@ -33,50 +34,65 @@ const AlbumsView: React.FC = () => {
     });
   };
 
-  const transformedAlbums = albums.map((album) => ({
+  const transformedAlbums = albums.map((album: Album) => ({
     id: album.album_name,
     title: album.album_name,
     coverImage: album.image_paths[0] || "/placeholder-image.jpg",
     imageCount: album.image_paths.length,
   }));
 
+  const handleAlbumClick = (albumId: string) => {
+    setCurrentAlbum(albumId);
+  };
+
+  const handleDeleteAlbum = async (albumId: string) => {
+    try {
+      await deleteAlbum(albumId);
+      refetch();
+    } catch (err) {
+      showErrorDialog("Error Deleting Album", err);
+    }
+  };
+
   return (
     <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold mb-4">Albums</h1>
-
-        {!showCreateForm ? (
-          <Button onClick={() => setShowCreateForm(true)} className="mb-4">
-            Create New Album
-          </Button>
-        ) : (
-          <CreateAlbumForm
-            onCancel={() => setShowCreateForm(false)}
-            onSuccess={() => {
-              setShowCreateForm(false);
-              refetch();
+      {currentAlbum ? (
+        <AlbumView
+          albumName={currentAlbum}
+          onBack={() => setCurrentAlbum(null)}
+          onError={showErrorDialog}
+        />
+      ) : (
+        <>
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-2xl font-bold">Albums</h1>
+            <Button onClick={() => setIsCreateFormOpen(true)} variant="outline">
+              Create New Album
+            </Button>
+          </div>
+          <AlbumList
+            albums={transformedAlbums}
+            albumsPerRow={3}
+            onAlbumClick={handleAlbumClick}
+            onEditAlbum={(albumId) => {
+              const album = albums.find((a) => a.album_name === albumId);
+              if (album) {
+                setEditingAlbum(album);
+              }
             }}
-            onError={showErrorDialog}
+            onDeleteAlbum={handleDeleteAlbum}
           />
-        )}
-      </div>
-      <AlbumList
-        albums={transformedAlbums}
-        albumsPerRow={3}
-        onAlbumClick={(albumId) => setCurrentAlbum(albumId)}
-        onEditAlbum={(albumId) => {
-          const album = albums.find((a) => a.album_name === albumId);
-          if (album) {
-            setEditingAlbum({
-              name: album.album_name,
-              description: album.description || "",
-            });
-          }
-        }}
-        onDeleteAlbum={(albumId) => {
-          // Implement delete functionality
+        </>
+      )}
+
+      <CreateAlbumForm
+        isOpen={isCreateFormOpen}
+        onClose={() => setIsCreateFormOpen(false)}
+        onSuccess={() => {
+          setIsCreateFormOpen(false);
           refetch();
         }}
+        onError={showErrorDialog}
       />
 
       <EditAlbumDialog
@@ -86,13 +102,6 @@ const AlbumsView: React.FC = () => {
           setEditingAlbum(null);
           refetch();
         }}
-        onError={showErrorDialog}
-      />
-
-      <ImageManagementDialog
-        albumName={currentAlbum}
-        onClose={() => setCurrentAlbum(null)}
-        onSuccess={() => refetch()}
         onError={showErrorDialog}
       />
 

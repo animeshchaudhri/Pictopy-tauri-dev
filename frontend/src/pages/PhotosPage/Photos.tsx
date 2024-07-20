@@ -13,9 +13,9 @@ const Photos: React.FC = () => {
   }
 
   return (
-    <div>
+    <>
       <MediaGallery mediaItems={images} title="Image Gallery" type="image" />
-    </div>
+    </>
   );
 };
 

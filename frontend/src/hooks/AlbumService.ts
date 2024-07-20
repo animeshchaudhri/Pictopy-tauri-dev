@@ -1,3 +1,4 @@
+
 import { useState, useCallback, useEffect } from "react";
 
 const API_BASE_URL = "http://127.0.0.1:8000/albums";
@@ -62,8 +63,9 @@ export const useDeleteAlbum = () => {
     setError(null);
     try {
       const result = await apiCall(`${API_BASE_URL}/delete-album`, "DELETE", {
-        album_id: albumId,
+        name: albumId,
       });
+      console.log(result);
       setIsLoading(false);
       return result;
     } catch (err) {
@@ -89,6 +91,7 @@ export const useAllAlbums = () => {
       const result = await apiCall(`${API_BASE_URL}/view-all`, "GET");
       setAlbums(result.albums);
       setIsLoading(false);
+      console.log(result);
     } catch (err) {
       setError(
         err instanceof Error ? err : new Error("An unknown error occurred")
@@ -135,14 +138,16 @@ export const useAddMultipleImagesToAlbum = () => {
 
   const addMultipleImages = useCallback(
     async (albumName: string, imagePaths: string[]) => {
+      console.log({ album_name: albumName, image_paths: imagePaths });
       setIsLoading(true);
       setError(null);
       try {
         const result = await apiCall(
           `${API_BASE_URL}/add-multiple-to-album`,
           "POST",
-          { album_name: albumName, image_paths: imagePaths }
+          { album_name: albumName, paths: imagePaths }
         );
+        console.log(result);
         setIsLoading(false);
         return result;
       } catch (err) {
@@ -167,12 +172,14 @@ export const useRemoveImageFromAlbum = () => {
       setIsLoading(true);
       setError(null);
       try {
+        console.log({ album_name: albumName, path: imagePath });
         const result = await apiCall(
           `${API_BASE_URL}/remove-from-album`,
           "DELETE",
-          { album_name: albumName, image_path: imagePath }
+          { album_name: albumName, path: imagePath }
         );
         setIsLoading(false);
+
         return result;
       } catch (err) {
         setError(
@@ -203,6 +210,7 @@ export const useViewAlbum = () => {
         "GET"
       );
       setAlbum(result);
+      console.log(result);
       setIsLoading(false);
     } catch (err) {
       setError(

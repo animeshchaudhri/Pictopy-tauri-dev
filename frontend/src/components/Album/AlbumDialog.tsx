@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useEditAlbumDescription } from "../../hooks/AlbumService";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,8 +10,14 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+interface Album {
+  album_name: string;
+  image_paths: string[];
+  description?: string;
+}
+
 interface EditAlbumDialogProps {
-  album: { name: string; description: string } | null;
+  album: Album | null;
   onClose: () => void;
   onSuccess: () => void;
   onError: (title: string, error: unknown) => void;
@@ -24,11 +30,16 @@ const EditAlbumDialog: React.FC<EditAlbumDialogProps> = ({
   onError,
 }) => {
   const { editDescription, isLoading: isEditing } = useEditAlbumDescription();
+  const [description, setDescription] = useState(album?.description || "");
+
+  useEffect(() => {
+    setDescription(album?.description || "");
+  }, [album]);
 
   const handleEditAlbum = async () => {
     if (album) {
       try {
-        await editDescription(album.name, album.description);
+        await editDescription(album.album_name, description);
         onSuccess();
       } catch (err) {
         onError("Error Editing Album", err);
@@ -40,17 +51,17 @@ const EditAlbumDialog: React.FC<EditAlbumDialogProps> = ({
     <Dialog open={!!album} onOpenChange={onClose}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Edit Album</DialogTitle>
+          <DialogTitle>Edit Album: {album?.album_name}</DialogTitle>
         </DialogHeader>
         <Textarea
-          value={album?.description || ""}
-          onChange={(e) => album && { ...album, description: e.target.value }}
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
           placeholder="Album description"
           className="my-4"
         />
         <DialogFooter>
           <Button onClick={handleEditAlbum} disabled={isEditing}>
-            Save
+            {isEditing ? "Saving..." : "Save"}
           </Button>
           <Button onClick={onClose} variant="outline">
             Cancel

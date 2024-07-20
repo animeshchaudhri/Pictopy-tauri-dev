@@ -2,7 +2,6 @@ import {
   AlbumIcon,
   FileIcon,
   HomeIcon,
-  ImageIcon,
   SettingsIcon,
   VideoIcon,
 } from "../Icons/Icons";
@@ -37,13 +36,7 @@ function Sidebar() {
           />
           <span className="font-sans">Ai tagging</span>
         </Link>
-        <Link to="/photos" className={linkClasses("/photos")}>
-          <ImageIcon
-            className="h-5 w-5"
-            fillColor={isActive("/photos") ? "#6465F3" : "none"}
-          />
-          <span className="font-sans">Photos</span>
-        </Link>
+
         <Link to="/videos" className={linkClasses("/videos")}>
           <VideoIcon
             className="h-5 w-5"

@@ -1,3 +1,4 @@
+//src\hooks\AI_Image.ts
 import { useState, useEffect } from "react";
 import { convertFileSrc } from "@tauri-apps/api/core";
 
@@ -60,3 +61,46 @@ const useAIImage = (folderPath: string) => {
 };
 
 export default useAIImage;
+
+interface AddFolderResult {
+  data: any | null;
+  error: string | null;
+  isLoading: boolean;
+}
+
+export function useAddFolder() {
+  const [result, setResult] = useState<AddFolderResult>({
+    data: null,
+    error: null,
+    isLoading: false,
+  });
+
+  const addFolder = async (folderPath: string): Promise<void> => {
+    setResult({ data: null, error: null, isLoading: true });
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000/images/add-folder", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ folder_path: folderPath }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add folder");
+      }
+
+      const data = await response.json();
+      setResult({ data, error: null, isLoading: false });
+    } catch (error) {
+      setResult({
+        data: null,
+        error: (error as Error).message,
+        isLoading: false,
+      });
+    }
+  };
+
+  return { addFolder, ...result };
+}
