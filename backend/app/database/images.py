@@ -7,8 +7,11 @@ from app.config.settings import (
     IMAGES_DATABASE_PATH,
     MAPPINGS_DATABASE_PATH,
 )
+from app.facecluster.init_face_cluster import get_face_cluster
+from app.facenet.facenet import detect_faces
 from app.utils.classification import get_classes
 from app.utils.metadata import extract_metadata
+from app.database.albums import remove_image_from_all_albums
 
 
 def create_image_id_mapping_table():
@@ -43,18 +46,19 @@ def create_images_table():
     """
     )
 
-    cursor.execute("SELECT path FROM image_id_mapping")
-    db_paths = [row[0] for row in cursor.fetchall()]
+    # cursor.execute("SELECT path FROM image_id_mapping")
+    # db_paths = [row[0] for row in cursor.fetchall()]
 
-    for filename in os.listdir(IMAGES_PATH):
-        file_path = os.path.abspath(os.path.join(IMAGES_PATH, filename))
-        if file_path not in db_paths:
-            print(f"Not in database: {file_path}")
-            class_ids = get_classes(file_path)
-            metadata = extract_metadata(file_path)
-            insert_image_db(file_path, class_ids, metadata)
-        else:
-            print(f"Already in database: {file_path}")
+    # for filename in os.listdir(IMAGES_PATH):
+    #     file_path = os.path.abspath(os.path.join(IMAGES_PATH, filename))
+    #     if file_path not in db_paths:
+    #         print(f"Not in database: {file_path}")
+    #         class_ids = get_classes(file_path)
+    #         metadata = extract_metadata(file_path)
+    #         insert_image_db(file_path, class_ids, metadata)
+    #         detect_faces(file_path)
+    #     else:
+    #         print(f"Already in database: {file_path}")
     conn.commit()
     conn.close()
 
@@ -96,9 +100,12 @@ def delete_image_db(path):
         cursor.execute("DELETE FROM images WHERE id = ?", (image_id,))
         cursor.execute("DELETE FROM image_id_mapping WHERE id = ?", (image_id,))
 
-        # Instead of calling delete_face_embeddings directly, use this:
+        # Instead of calling delete_face_embeddings directly, for circular import error
+        remove_image_from_all_albums(image_id)
         from app.database.faces import delete_face_embeddings
 
+        clusters = get_face_cluster()
+        clusters.remove_image(image_id)
         delete_face_embeddings(image_id)
 
     conn.commit()
