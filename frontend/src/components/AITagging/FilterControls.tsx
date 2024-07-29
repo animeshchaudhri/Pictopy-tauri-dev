@@ -47,7 +47,7 @@ export default function FilterControls({
       await onFolderAdded();
     } catch (error) {
       console.error("Error adding folder:", error);
-      // Handle the error (e.g., show an error message to the user)
+      
     }
   };
 

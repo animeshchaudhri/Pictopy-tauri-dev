@@ -38,7 +38,7 @@ const MediaView: React.FC<MediaViewProps> = ({
     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-90 z-50">
       <button
         onClick={onClose}
-        className="absolute top-4 left-4 px-4 py-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
+        className="absolute z-0 top-4 left-4 px-4 py-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200"
       >
         Back
       </button>

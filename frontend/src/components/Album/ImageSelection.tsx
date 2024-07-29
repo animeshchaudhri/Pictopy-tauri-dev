@@ -3,6 +3,8 @@ import { useFetchAllImages } from "@/hooks/UseVideos";
 import { useAddMultipleImagesToAlbum } from "../../hooks/AlbumService";
 import { Button } from "@/components/ui/button";
 import { convertFileSrc } from "@tauri-apps/api/core";
+import FolderPicker from "../FolderPicker/FolderPicker";
+import { useAddFolder } from "@/hooks/AI_Image";
 
 interface ImageSelectionPageProps {
   albumName: string;
@@ -62,10 +64,18 @@ const ImageSelectionPage: React.FC<ImageSelectionPageProps> = ({
   if (!Array.isArray(allImages) || allImages.length === 0) {
     return <div>No images available. Please add some images first.</div>;
   }
+  const handleFolderPick = async (path: string) => {
+    try {
+      await useAddFolder(path);
+    } catch (error) {
+      console.error("Error adding folder:", error);
+    }
+  };
 
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Select Images for {albumName}</h1>
+      {/* <FolderPicker setFolderPath={handleFolderPick} /> */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {allImages.map((imagePath, index) => {
           const srcc = convertFileSrc(imagePath);
