@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import  { useCallback, useMemo, useState } from "react";
 import FilterControls from "./FilterControls";
 import MediaGrid from "../Media/Mediagrid";
 import PaginationControls from "../ui/PaginationControls";

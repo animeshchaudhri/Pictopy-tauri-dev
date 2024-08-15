@@ -39,7 +39,7 @@ pub fn get_all_images_with_cache(
     let cached_images = cache_state.get_cached_images();
     
     let mut images_by_year_month = if let Some(cached) = cached_images {
-        // Convert cached Vec<PathBuf> to HashMap<u32, HashMap<u32, Vec<String>>>
+        
         let mut map: HashMap<u32, HashMap<u32, Vec<String>>> = HashMap::new();
         for path in cached {
             if let Ok(metadata) = std::fs::metadata(&path) {

@@ -2,7 +2,6 @@ import { ROUTES } from "@/constants/routes";
 import AITagging from "@/pages/AITagging/AITaging";
 import Album from "@/pages/Album/Album";
 import Dashboard from "@/pages/Dashboard/Dashboard";
-
 import Settings from "@/pages/SettingsPage/Settings";
 import Vidoes from "@/pages/VideosPage/Videos";
 import React from "react";

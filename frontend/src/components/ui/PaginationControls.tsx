@@ -6,9 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "./Pagination";
-
-
+} from "./pagination";
 
 export default function PaginationControls({
   currentPage,

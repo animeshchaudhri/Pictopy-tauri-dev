@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-
 import { ROUTES } from "../constants/routes";
 import Layout from "@/layout/main";
 import { LayoutRoutes } from "./LayoutRoutes/LayoutRoutes";

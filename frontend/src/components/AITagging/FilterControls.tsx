@@ -6,12 +6,13 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { ListOrderedIcon } from "../ui/Navigation/Icons/Icons";
+
 import { Button } from "../ui/button";
 import { MediaItem } from "@/types/Media";
 import FolderPicker from "../FolderPicker/FolderPicker";
 import { useAddFolder } from "@/hooks/AI_Image";
 import LoadingScreen from "../ui/LoadingScreen/LoadingScreen";
+import { ListOrderedIcon } from "../ui/Icons/Icons";
 
 interface FilterControlsProps {
   filterTag: string;
@@ -47,7 +48,6 @@ export default function FilterControls({
       await onFolderAdded();
     } catch (error) {
       console.error("Error adding folder:", error);
-      
     }
   };
 

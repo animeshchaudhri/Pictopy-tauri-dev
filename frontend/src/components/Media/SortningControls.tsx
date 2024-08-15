@@ -6,9 +6,10 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ListOrderedIcon } from "@/components/ui/Navigation/Icons/Icons";
+
 import { Button } from "@/components/ui/button";
 import { SortingControlsProps, YearOption } from "@/types/Media";
+import { ListOrderedIcon } from "../ui/Icons/Icons";
 
 const SortingControls: React.FC<SortingControlsProps> = ({
   sortBy,
@@ -21,9 +22,11 @@ const SortingControls: React.FC<SortingControlsProps> = ({
 
   // Extract years from image data
   const years = mediaItems.reduce<string[]>((acc, curr) => {
-    const year = new Date(curr.date).getFullYear().toString();
-    if (!acc.includes(year)) {
-      acc.push(year);
+    if (curr.date) {
+      const year = new Date(curr.date).getFullYear().toString();
+      if (!acc.includes(year)) {
+        acc.push(year);
+      }
     }
     return acc;
   }, []);

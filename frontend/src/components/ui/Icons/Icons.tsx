@@ -1,28 +1,10 @@
-export function MountainIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
-  );
-}
+import { IconProps } from "@/types/Icons";
 
-export function SettingsIcon(props: any) {
+export function SettingsIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      // fill="currentColor"
       className="size-6"
       fill={props.fillColor}
       {...props}
@@ -36,7 +18,7 @@ export function SettingsIcon(props: any) {
   );
 }
 
-export function HomeIcon(props: any) {
+export function HomeIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +33,7 @@ export function HomeIcon(props: any) {
   );
 }
 
-export function ImageIcon(props: any) {
+export function ImageIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +53,7 @@ export function ImageIcon(props: any) {
   );
 }
 
-export function VideoIcon(props: any) {
+export function VideoIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +71,7 @@ export function VideoIcon(props: any) {
   );
 }
 
-export function AlbumIcon(props: any) {
+export function AlbumIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +91,7 @@ export function AlbumIcon(props: any) {
   );
 }
 
-export function FileIcon(props: any) {
+export function FileIcon(props: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +105,7 @@ export function FileIcon(props: any) {
   );
 }
 
-export function FolderOpenIcon(props: any) {
+export function FolderOpenIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -142,7 +124,7 @@ export function FolderOpenIcon(props: any) {
   );
 }
 
-export function Pitopy(props: any) {
+export function Pitopy(props: IconProps) {
   return (
     <svg
       {...props}
@@ -163,7 +145,7 @@ export function Pitopy(props: any) {
   );
 }
 
-export function LayoutGridIcon(props: any) {
+export function LayoutGridIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -185,7 +167,7 @@ export function LayoutGridIcon(props: any) {
   );
 }
 
-export function ListOrderedIcon(props: any) {
+export function ListOrderedIcon(props: IconProps) {
   return (
     <svg
       {...props}
@@ -209,7 +191,7 @@ export function ListOrderedIcon(props: any) {
   );
 }
 
-export function RefreshCwIcon(props: any) {
+export function RefreshCwIcon(props: IconProps) {
   return (
     <svg
       {...props}

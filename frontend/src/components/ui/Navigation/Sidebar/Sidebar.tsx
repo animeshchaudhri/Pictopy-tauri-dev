@@ -1,11 +1,11 @@
+import { Link, useLocation } from "react-router-dom";
 import {
   AlbumIcon,
   FileIcon,
   HomeIcon,
   SettingsIcon,
   VideoIcon,
-} from "../Icons/Icons";
-import { Link, useLocation } from "react-router-dom";
+} from "../../Icons/Icons";
 
 function Sidebar() {
   const location = useLocation();

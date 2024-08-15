@@ -1,4 +1,4 @@
-// components/MediaGallery/MediaCard.tsx]
+// components/MediaGallery/MediaCard.tsx
 
 import { MediaCardProps } from "@/types/Media";
 

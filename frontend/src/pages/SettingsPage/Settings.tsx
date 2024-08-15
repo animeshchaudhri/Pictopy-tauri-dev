@@ -3,11 +3,12 @@ import FolderPicker from "@/components/FolderPicker/FolderPicker";
 
 import { deleteCache } from "@/services/cacheService";
 import { Button } from "@/components/ui/button";
-import { RefreshCwIcon } from "@/components/ui/Navigation/Icons/Icons";
+
 import { useLocalStorage } from "@/hooks/LocalStorage";
+import { RefreshCwIcon } from "@/components/ui/Icons/Icons";
 
 const Settings: React.FC = () => {
-  const [currentPath, setCurrentPath] = useLocalStorage("folderPath", "abc");
+  const [currentPath, setCurrentPath] = useLocalStorage("folderPath", "");
 
   const handleFolderPathChange = (newPath: string) => {
     setCurrentPath(newPath);

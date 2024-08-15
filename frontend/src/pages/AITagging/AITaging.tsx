@@ -16,7 +16,7 @@ const AITagging: React.FC = () => {
 
   return (
     <>
-      <AIGallery mediaItems={images} title="Tagged images" type="image" />
+      <AIGallery mediaItems={images} title="Tagged images" type="image" folderPath="" />
     </>
   );
 };
